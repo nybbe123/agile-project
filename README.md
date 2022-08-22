@@ -1,70 +1,48 @@
+# Title ...
+
+## About website ...
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## In the terminal you have to write:
 
-In the project directory, you can run:
+### `npm i`
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Contributors to this project:
 
-### `npm test`
+**Jonatan Nyberg [github](https://github.com/nybbe123)**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Fia Andersson [github](https://github.com/fiababiakandersson)**
 
-### `npm run build`
+**Wing Yan Cheung [github](https://github.com/millie-wy)**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Ella Larsson [github](https://github.com/EllaMiri)**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Erik Isaksson**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Requirements for passing:
 
-### `npm run eject`
+- [] The project must use JavaScript.
+- [] The website must have a responsive design and work well even on a mobile screen.
+- [] The appearance of the website must be uniform and professional.
+- [] The project must be posted on Github.
+- [] Each participant in the project must have at least two commits in the project.
+- [] A user must be able to see a compilation of skills and experiences (gallery view).
+- [] If a user clicks on a competence, you will see a detailed page with detailed information.
+- [] A user must be able to contact a participant via a contact form (delivery by e-mail is not necessary).
+- [] A user must be able to See a map of the school's address.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### VG grade:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [] input field is in focus when the user is writing.
+- [] Input validation allowing only valid characters (decide yourself what is reasonable).
+- [] A user must be able to register and log in.
+- [] A logged-in user's results must be saved in local storage.
+- [] Animations are used to enhance the presentation.
