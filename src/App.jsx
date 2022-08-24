@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Layout from "./Layout";
+import MemberList from "./memberList";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={"HOME???"} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/team" element={<MemberList />} />
         </Route>
       </Routes>
     </BrowserRouter>
