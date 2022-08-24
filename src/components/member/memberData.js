@@ -1,8 +1,8 @@
-import ellaPicture from "./assets/ella.png"
-import erikPicture from "./assets/erik.jpeg"
-import fiaPicture from "./assets/fia.png"
-import jonatanPicture from "./assets/jonatan.jpeg"
-import milliePicture from "./assets/millie.jpeg"
+import ellaPicture from "../../assets/ella.png";
+import erikPicture from "../../assets/erik.jpeg";
+import fiaPicture from "../../assets/fia.png";
+import jonatanPicture from "../../assets/jonatan.jpeg";
+import milliePicture from "../../assets/millie.jpeg";
 
 export const memberData = [
   {
