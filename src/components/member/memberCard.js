@@ -5,7 +5,7 @@ function MemberCard() {
     <div>
       {memberData.map((member) => (
         <div key={member.id}>
-          <img src={member.img} alt={member.name}></img>  
+          <img src={member.img} alt={member.name}></img>
           <p>{member.name}</p>
         </div>
       ))}

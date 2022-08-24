@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Layout from "./Layout";
-import MemberList from "./memberList";
+import Layout from "./components/layout/Layout";
+import MemberList from "./components/member/memberList";
 
 function App() {
   return (
