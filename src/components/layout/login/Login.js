@@ -1,8 +1,10 @@
 import React from "react";
 import style from "./Login.module.css";
 import Button from "../../UI/Button";
+import Input from "../../UI/Input";
+import Label from "../../UI/Label";
 
-const Login = () => {
+const Login = (props) => {
   return (
     <form className={style["form-container"]}>
       <div>
@@ -12,12 +14,12 @@ const Login = () => {
         </p>
       </div>
       <div className={style["form-input-container"]}>
-        <label htmlFor="email">Email*</label>
-        <input type="text" />
+        <Label htmlFor="email">Email*</Label>
+        <Input type="text" />
       </div>
       <div className={style["form-input-container"]}>
-        <label htmlFor="password">Password*</label>
-        <input type="password" />
+        <Label htmlFor="password">Password*</Label>
+        <Input type="password" />
         <ul>
           <li>Forgot password?</li>
         </ul>
@@ -25,7 +27,14 @@ const Login = () => {
       <Button>LOGIN</Button>
       <div className={style["sign-up-in"]}>
         <p>
-          Dont have an account? <span>Sign up</span>
+          Dont have an account?{" "}
+          <span
+            onClick={() => {
+              props.signUpInHandler(false);
+            }}
+          >
+            Sign up
+          </span>
         </p>
       </div>
     </form>
