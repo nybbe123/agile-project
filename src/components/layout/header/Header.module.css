@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   font-family: "Alegreya Sans SC", sans-serif;
+  color: white;
 }
 
 .headerLeft {
