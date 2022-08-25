@@ -1,0 +1,23 @@
+#root {
+  display: flex;
+
+  min-height: 770px;
+}
+
+.background {
+  width: 100%;
+
+  min-height: 700px;
+
+  object-fit: cover;
+
+  object-position: center top;
+
+  position: absolute;
+
+  z-index: -99;
+
+  left: 0;
+
+  top: 0;
+}
