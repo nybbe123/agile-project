@@ -11,6 +11,14 @@ const Intro = () => {
           IN NEED OF A NEW{" "}
           <span className={style.introHeadingRegular}>WEBSITE?</span>
         </h1>
+        <h2 className={style.introText}>
+          Webly have helped designing and developing <br /> top quality websites
+          for over 100 companies
+        </h2>
+        <div className={style.btnContainer}>
+          <button className={style.serviceBtn}>OUR SERVICES</button>
+          <button className={style.contactBtn}>CONTACT US</button>
+        </div>
       </div>
     </div>
   );
