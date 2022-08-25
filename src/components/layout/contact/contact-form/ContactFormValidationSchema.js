@@ -1,5 +1,7 @@
 import * as yup from "yup";
 
+const phoneRegExp = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+
 export const validationSchema = yup.object({
   name: yup
     .string()
@@ -8,11 +10,13 @@ export const validationSchema = yup.object({
       "Latin letters only"
     )
     .min(2, "Name must be at least 2 characters")
-    .required("Name is required"),
-  email: yup
+    .required("Required"),
+  company: yup.string().min(2, "Company name must be at least 2 characters"),
+  email: yup.string().email("Invalid email format").required("Required"),
+  phone: yup
     .string()
-    .email("Invalid email format")
-    .required("Email is required"),
+    .required("Required")
+    .matches(phoneRegExp, "Invalid phone number"),
   message: yup
     .string()
     .min(20, "Message must be at least 20 characters")

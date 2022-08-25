@@ -14,9 +14,11 @@ form {
 label {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  text-transform: capitalize;
-  padding-top: 40px;
+  padding-top: 30px;
   padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 input {
@@ -26,5 +28,58 @@ input {
   font-size: 16px;
   font-weight: 300;
   font-family: "Roboto", sans-serif;
-  padding: 5px 1px;
+  padding: 5px 0;
+  margin-top: 5px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #4a99e2;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #4a99e2;
+  color: #4a99e2;
+}
+
+input::placeholder {
+  color: #858585;
+  opacity: 50%;
+  font-style: italic;
+}
+
+.form-error {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+button {
+  width: 186px;
+  height: 52px;
+  background: #4a99e2;
+  border: none;
+  border-radius: 8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 15%;
+  color: #fff;
+  margin-top: 40px;
+}
+
+button:hover:enabled {
+  background: #2573bb;
+}
+
+.opac {
+  opacity: 50%;
 }
