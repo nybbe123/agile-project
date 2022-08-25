@@ -26,13 +26,44 @@
   gap: 0.5rem;
 }
 
-.form-input-container li {
-  text-align: end;
-  list-style: none;
+.form-input-container label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  color: #848484;
+  font-size: 0.8rem;
+}
+
+.form-input-container input {
+  border: none;
+  border-bottom: 1px solid #cbcbcb;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  padding-bottom: 0.5rem;
+}
+
+.form-input-container input:focus {
+  outline: none;
+  border-bottom: 2px solid #4a99e2;
   color: #4a99e2;
+}
+
+.error-container {
+  color: #e24a4a;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.terms-conditions {
+  color: #a5a5a5;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .sign-up-in {
