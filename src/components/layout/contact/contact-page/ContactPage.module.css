@@ -1,0 +1,55 @@
+#root {
+  display: flex;
+  position: relative;
+  min-height: 700px;
+  width: 100%;
+  gap: 4%;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 700px;
+  object-fit: cover;
+  object-position: center top;
+  z-index: -99;
+}
+
+#left {
+  padding: 80px 0 0 70px;
+  width: 48%;
+  color: #fff;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#right {
+  width: 48%;
+  color: #fff;
+}
+
+.heading {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.label {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#form-container {
+  background: #fff;
+  width: 400px;
+  min-height: 600px;
+  height: fit-content;
+  margin: auto;
+  border-radius: 0 0 8px 8px;
+}
