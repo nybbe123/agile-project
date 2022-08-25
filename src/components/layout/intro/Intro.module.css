@@ -1,23 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300;500&display=swap");
+
 #root {
   display: flex;
-
   min-height: 770px;
 }
 
 .background {
   width: 100%;
-
   min-height: 700px;
-
   object-fit: cover;
-
   object-position: center top;
-
   position: absolute;
-
   z-index: -99;
-
   left: 0;
-
   top: 0;
+}
+
+.introContainer {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.introHeadingBold {
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.introHeadingRegular {
+  font-weight: 300;
+  font-size: 64px;
 }

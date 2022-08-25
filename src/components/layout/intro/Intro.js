@@ -6,11 +6,12 @@ const Intro = () => {
     <div id={style.root}>
       <img src={IntroBg} alt="background" className={style.background} />
 
-      {/* <div id={style.left}>
-        <h6 className={style.label}>Contact Us</h6>
-
-        <h4 className={style.heading}>Get in touch with us today</h4>
-      </div> */}
+      <div className={style.introContainer}>
+        <h1 className={style.introHeadingBold}>
+          IN NEED OF A NEW{" "}
+          <span className={style.introHeadingRegular}>WEBSITE?</span>
+        </h1>
+      </div>
     </div>
   );
 };
