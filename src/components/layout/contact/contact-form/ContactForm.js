@@ -1,9 +1,13 @@
 import { useFormik } from "formik";
+import { useEffect, useState } from "react";
 import { memberData } from "../../../member/memberData";
 import style from "./ContactForm.module.css";
 import { validationSchema } from "./ContactFormValidationSchema";
 
 const ContactForm = () => {
+  const [fontColor, setFontColor] = useState("grey");
+  const [sending, setSending] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -18,9 +22,19 @@ const ContactForm = () => {
     validationOnMount: true,
   });
 
+  useEffect(() => {
+    formik.values.teammbr !== "default"
+      ? setFontColor("dark")
+      : setFontColor("grey");
+  }, [formik.values.teammbr]);
+
   // not sure if we wanna reset the form when the user clicks submit so I leave it for now
   const handleSubmit = async (values, resetForm) => {
-    console.log("stop clicking me");
+    setSending(true);
+    setTimeout(() => {
+      setSending(false);
+      resetForm();
+    }, 2000);
   };
 
   return (
@@ -91,8 +105,11 @@ const ContactForm = () => {
           placeholder="Select a person to contact"
           value={formik.values.teammbr}
           onChange={formik.handleChange}
+          className={style[fontColor]}
         >
-          <option disabled value="default" />
+          <option disabled value="default">
+            Select person to contact
+          </option>
           {memberData.map((mbr) => (
             <option value={mbr.name} key={mbr.id}>
               {mbr.name}
@@ -120,11 +137,15 @@ const ContactForm = () => {
       </label>
 
       <button
-        className={!formik.isValid ? style.opac : null}
-        disabled={!formik.isValid}
+        className={
+          !formik.isValid || formik.values === formik.initialValues
+            ? style.opac
+            : null
+        }
+        disabled={!formik.isValid || formik.values === formik.initialValues}
         type="submit"
       >
-        Send Message
+        {sending ? "Sending..." : "Send Message"}
       </button>
     </form>
   );

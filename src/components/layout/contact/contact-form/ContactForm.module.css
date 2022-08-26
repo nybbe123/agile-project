@@ -14,7 +14,7 @@ form {
 label {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  padding-top: 15px;
+  padding-top: 20px;
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -75,6 +75,8 @@ input::placeholder {
   position: absolute;
   left: 0;
   bottom: -5px;
+  color: #e24a4a;
+  font-style: italic;
 }
 
 button {
@@ -98,4 +100,12 @@ button:hover:enabled {
 
 .opac {
   opacity: 50%;
+}
+
+.dark {
+  color: #333333;
+}
+
+.grey {
+  color: rgba(133, 133, 133, 0.5);
 }
