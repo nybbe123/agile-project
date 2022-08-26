@@ -1,6 +1,6 @@
 #root {
   color: #848484;
-  padding: 80px 40px 40px 40px;
+  padding: 65px 40px 40px 40px;
   font-family: "Roboto", sans-serif;
   font-size: 10px;
   font-weight: 300;
@@ -14,14 +14,15 @@ form {
 label {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-input {
+input,
+select {
   color: #333333;
   border: none;
   border-bottom: 1px solid #cbcbcb;
@@ -30,6 +31,19 @@ input {
   font-family: "Roboto", sans-serif;
   padding: 5px 0;
   margin-top: 5px;
+}
+
+select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  background-position: right !important;
+  background: url("data:image/svg+xml,<svg height='11px' width='11px' viewBox='0 0 16 16' fill='%234a99e2' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>")
+    no-repeat;
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 input:-webkit-autofill,
@@ -43,7 +57,9 @@ input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-input:focus {
+input:focus,
+option,
+select:focus {
   outline: none;
   border-bottom: 1px solid #4a99e2;
   color: #4a99e2;
@@ -59,6 +75,8 @@ input::placeholder {
   position: absolute;
   left: 0;
   bottom: -5px;
+  color: #e24a4a;
+  font-style: italic;
 }
 
 button {
@@ -82,4 +100,12 @@ button:hover:enabled {
 
 .opac {
   opacity: 50%;
+}
+
+.dark {
+  color: #333333;
+}
+
+.grey {
+  color: rgba(133, 133, 133, 0.5);
 }

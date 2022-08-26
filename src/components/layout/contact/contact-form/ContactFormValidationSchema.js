@@ -2,7 +2,7 @@ import * as yup from "yup";
 
 const phoneRegExp = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
 
-export const validationSchema = yup.object({
+export const validationSchema = yup.object().shape({
   name: yup
     .string()
     .matches(
@@ -17,6 +17,13 @@ export const validationSchema = yup.object({
     .string()
     .required("Required")
     .matches(phoneRegExp, "Invalid phone number"),
+  teammbr: yup
+    .string()
+    .test(
+      "empty-check",
+      "Required",
+      (teammbr) => !teammbr || teammbr !== "default"
+    ),
   message: yup
     .string()
     .min(20, "Message must be at least 20 characters")
