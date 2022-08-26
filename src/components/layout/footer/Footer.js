@@ -1,36 +1,36 @@
 import { LinkedIn, Facebook, Instagram, Email } from "@mui/icons-material";
+import { NavLink } from "react-router-dom";
+import style from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div
-      style={{
-        background: "skyblue",
-        padding: "2rem",
-        display: "flex",
-        justifyContent: "space-around",
-      }}
-    >
-      <div className="address">
-        <h5 style={{ fontSize: "1.1rem", margin: "0 0 10px 0" }}>Address</h5>
-        <h6 style={{ fontSize: "1rem", margin: "0" }}>
-          Medieinstitutet Göteborg
-        </h6>
-        <p style={{ margin: ".3rem 0" }}>Anders Personsgatan 18</p>
-        <p style={{ margin: ".3rem 0" }}>416 64 Göteborg</p>
-        <p style={{ margin: 0 }}>031-83 28 31</p>
-      </div>
-
-      {/* this is to fit the space-around, in case any extra thing will be planned later */}
-      <div className="social-media">
-        <h5 style={{ fontSize: "1.1rem", margin: "0 0 10px 0" }}>Find Us</h5>
-        <div style={{ display: "flex", flexDirection: "row", gap: ".3rem" }}>
+    <footer className={style["flex"]}>
+      <span className={style["footer-logo"]}>WEBLY</span>
+      <ul className={style["footer-link"]}>
+        <NavLink className={style["navlink"]} to="/services">
+          SERVICES
+        </NavLink>
+        <NavLink className={style["navlink"]} to="/about">
+          ABOUT US
+        </NavLink>
+        <NavLink className={style["navlink"]} to="/contact">
+          CONTACT
+        </NavLink>
+      </ul>
+      <div className={style["footer-bottom"]}>
+        <div className={style["language"]}>
+          <span>EN</span>
+          <div className={style["devider"]} />
+          <span>SV</span>
+        </div>
+        <p> &copy;2022 All rights served</p>
+        <div className={style["social-media"]}>
           <Facebook fontSize="large" />
           <Instagram fontSize="large" />
           <LinkedIn fontSize="large" />
-          <Email fontSize="large" />
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
