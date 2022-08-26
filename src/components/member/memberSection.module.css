@@ -1,65 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;500&display=swap");
 
 .container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 5rem;
-    margin-right: 3rem;
-    padding-top: 4rem;
-    padding-bottom: 6rem;
-    max-width: 250rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  margin-right: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  max-width: 250rem;
+  color: #333333;
 }
 
 .p {
-    font-family: Montserrat, Roboto;
-    letter-spacing: 2.5px;
-    font-size: 12px;
-    margin-bottom: .5rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2.5px;
+  font-size: 12px;
+  margin-bottom: 0.5rem;
 }
 
 .memberTitleContainer {
-    display: flex;
-    font-size: 29px;
-    column-gap: 1rem;
-    padding-bottom: 5rem;
+  display: flex;
+  font-size: 29px;
+  column-gap: 1rem;
+  padding-bottom: 5rem;
 }
 
 .theFantastic {
-    font-family: Montserrat, Roboto;
+  font-family: "Montserrat", sans-serif;
 }
 
 .five {
-    font-family: Montserrat, Roboto;
-    font-weight: 100;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
 }
 
 .memberContainer {
-    display: flex;
-    column-gap: 12rem;
-    row-gap: 4rem;
-    flex-wrap: wrap;
+  display: flex;
+  column-gap: 12rem;
+  row-gap: 4rem;
+  flex-wrap: wrap;
 }
 
 .memberPic {
-    max-width: 103px;
-    height: auto;
+  max-width: 103px;
+  height: auto;
 }
 
 .memberInfo {
-    display: flex;
+  display: flex;
 }
 
 .memberText {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 1rem;
-    font-family: Roboto, Montserrat;
-    letter-spacing: .5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .memberName {
-    font-weight: bold;
-    font-family: Montserrat;
-    color: #4A99E2;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  color: #4a99e2;
 }
