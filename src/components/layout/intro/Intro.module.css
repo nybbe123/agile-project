@@ -47,9 +47,18 @@
   border: none;
   background-color: #4a99e2;
   margin-right: 2rem;
-  color: white;
-  font-family: "Roboto", sans-serif;
   letter-spacing: 0.2rem;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  cursor: pointer;
+}
+
+.serviceBtn:hover:enabled {
+  background: #2573bb;
+}
+
+.contactBtn:hover:enabled {
+  background: rgba(56, 57, 60, 0.4);
 }
 
 .contactBtn {
@@ -58,9 +67,10 @@
   border-radius: 10px;
   background-color: transparent;
   border: 3px solid #4a99e2;
+  letter-spacing: 0.2rem;
   color: white;
   font-family: "Roboto", sans-serif;
-  letter-spacing: 0.2rem;
+  cursor: pointer;
 }
 
 .btnContainer {
