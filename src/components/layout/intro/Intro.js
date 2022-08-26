@@ -12,8 +12,8 @@ const Intro = () => {
           <span className={style.introHeadingRegular}>WEBSITE?</span>
         </h1>
         <h2 className={style.introText}>
-          Webly have helped designing and developing <br /> top quality websites
-          for over 100 companies
+          Webly have helped design and develop <br /> top quality websites for
+          over 100 companies
         </h2>
         <div className={style.btnContainer}>
           <button className={style.serviceBtn}>OUR SERVICES</button>
