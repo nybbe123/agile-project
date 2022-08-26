@@ -3,6 +3,7 @@ import style from "./Login.module.css";
 import Button from "../../UI/Button";
 import { useFormik } from "formik";
 import UserContext from "../../../context/UserContext";
+import { useNavigate } from "react-router-dom";
 
 const validate = (values) => {
   const errors = {};
@@ -24,6 +25,7 @@ const validate = (values) => {
 
 const Login = (props) => {
   const ctx = useContext(UserContext);
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -33,6 +35,7 @@ const Login = (props) => {
     onSubmit: (values) => {
       localStorage.setItem("user", JSON.stringify(values));
       ctx.onLogIn();
+      navigate("/");
     },
   });
 
