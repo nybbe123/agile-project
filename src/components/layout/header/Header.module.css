@@ -13,10 +13,13 @@
 }
 
 .logo {
+  position: absolute;
   margin-left: 5rem;
-  font-size: 24px;
   margin-top: 1rem;
   cursor: pointer;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .headerRight {
