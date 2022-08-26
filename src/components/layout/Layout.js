@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-import CompanyMap from "./companyMap/CompanyMap";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 
@@ -9,7 +8,6 @@ const Layout = () => {
     <div>
       <Header />
       <Outlet />
-      <CompanyMap />
       <Footer />
     </div>
   );
