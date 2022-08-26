@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&family=Montserrat:wght@700&family=Roboto:wght@500&display=swap");
 #root {
   display: flex;
-  min-height: 770px;
+  height: 100vh;
 }
 
 .background {
