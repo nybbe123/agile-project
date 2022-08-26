@@ -1,6 +1,17 @@
 .login-base {
+  position: relative;
   height: 100vh;
   display: flex;
+}
+
+.logo {
+  position: absolute;
+  margin-left: 5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .login-base-background {
@@ -16,4 +27,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
 }

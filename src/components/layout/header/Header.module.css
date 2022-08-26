@@ -13,10 +13,13 @@
 }
 
 .logo {
+  position: absolute;
   margin-left: 5rem;
-  font-size: 24px;
   margin-top: 1rem;
   cursor: pointer;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .headerRight {
@@ -26,11 +29,13 @@
 
 .navLinks {
   display: flex;
+  align-items: center;
   margin-right: 5rem;
   margin-top: 1rem;
 }
 
-.navItems {
+.navItems,
+.loginOutBtn {
   font-size: 16px;
   list-style-type: none;
   padding-left: 1rem;
@@ -40,4 +45,11 @@
 
 .navMarginRight {
   margin-right: 1.4rem;
+}
+
+.loginOutBtn {
+  border: 2px solid #4a99e2;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  margin-left: 3rem;
 }

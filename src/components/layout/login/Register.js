@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import style from "./Register.module.css";
 import Button from "../../UI/Button";
 import { useFormik } from "formik";
+import UserContext from "../../../context/UserContext";
 
 const validate = (values) => {
   const errors = {};
@@ -30,6 +31,7 @@ const validate = (values) => {
 };
 
 const Register = (props) => {
+  const ctx = useContext(UserContext);
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -39,6 +41,7 @@ const Register = (props) => {
     validate,
     onSubmit: (values) => {
       localStorage.setItem("user", JSON.stringify(values));
+      ctx.onLogIn();
     },
   });
 

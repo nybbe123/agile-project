@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "./Login.module.css";
 import Button from "../../UI/Button";
 import { useFormik } from "formik";
+import UserContext from "../../../context/UserContext";
 
 const validate = (values) => {
   const errors = {};
@@ -22,6 +23,7 @@ const validate = (values) => {
 };
 
 const Login = (props) => {
+  const ctx = useContext(UserContext);
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -30,6 +32,7 @@ const Login = (props) => {
     validate,
     onSubmit: (values) => {
       localStorage.setItem("user", JSON.stringify(values));
+      ctx.onLogIn();
     },
   });
 

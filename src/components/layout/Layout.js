@@ -7,8 +7,6 @@ const Layout = () => {
   window.scrollTo(0, 0);
   return (
     <div>
-      <Header />
-      <Intro />
       <Outlet />
       <Footer />
     </div>
