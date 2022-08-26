@@ -1,4 +1,5 @@
 import { useFormik } from "formik";
+import { memberData } from "../../../member/memberData";
 import style from "./ContactForm.module.css";
 import { validationSchema } from "./ContactFormValidationSchema";
 
@@ -9,11 +10,10 @@ const ContactForm = () => {
       company: "",
       email: "",
       phone: "",
+      teammbr: "default",
       message: "",
     },
-    onSubmit: (values, { resetForm }) => {
-      handleSubmit(values, resetForm);
-    },
+    onSubmit: (values, { resetForm }) => handleSubmit(values, resetForm),
     validationSchema: validationSchema,
     validationOnMount: true,
   });
@@ -82,6 +82,27 @@ const ContactForm = () => {
           <div className={style["form-error"]}>{formik.errors.phone}</div>
         ) : null}
       </label>
+
+      <div style={{ position: "relative" }}>
+        <select
+          id="teammbr"
+          type="teammbr"
+          name="teammbr"
+          placeholder="Select a person to contact"
+          value={formik.values.teammbr}
+          onChange={formik.handleChange}
+        >
+          <option disabled value="default" />
+          {memberData.map((mbr) => (
+            <option value={mbr.name} key={mbr.id}>
+              {mbr.name}
+            </option>
+          ))}
+        </select>
+        {formik.errors.teammbr ? (
+          <div className={style["form-error"]}>{formik.errors.teammbr}</div>
+        ) : null}
+      </div>
 
       <label htmlFor="message">
         Message *
