@@ -43,7 +43,7 @@
 .serviceBtn {
   width: 182px;
   height: 52px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
   background-color: #4a99e2;
   margin-right: 2rem;
@@ -64,7 +64,7 @@
 .contactBtn {
   width: 182px;
   height: 52px;
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: transparent;
   border: 3px solid #4a99e2;
   letter-spacing: 0.2rem;
