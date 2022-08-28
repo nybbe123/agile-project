@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;500&display=swap');
+
+.serviceSection {
+    background-color: #FFFFFF;
+    height: 1000px;
+    font-family: 'Montserrat', 'Roboto';
+}
+
+.textAlign {
+    padding-top: 150px;
+    padding-left: 50px;
+}
+
+.text2Align {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.whtStyle {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+.text2Align:hover {
+    transform: scale(1.1);
+    z-index: 2;
+    transition: 0.5s;
+}
+
+
+.expStyle {
+    margin-left: 10px;
+    font-weight: 100;
+    font-size: 30px;
+    color: #474747 ;
+   
+}
+
+
+.h1Style {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.infoStyle {
+    font-size: 16px;
+    width: 65%;
+    font-weight: lighter;
+    font-family: 'Roboto';
+    line-height: 150%;
+}
+
+img {
+    width: 700px;
+    padding-top: 100px;
+    padding-right: 200px;
+    position: relative;
+}
+.align {
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+}
+.imgAlign {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.image {
+    transition: 0.5s;
+}
+.image:hover{
+    transform: scale(1.1);
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.box {
+    position: absolute;
+    top: 70px;
+    left: 130px;
+    width: 400px;
+    height: 340px;
+    background-color: #4A99E2;
+}
+
+.boxesAlign{
+    display: flex;
+    flex-direction: row;
+}
+
+.firstBox {
+    display: flex;
+    flex-direction: row;
+    margin-top: 110px;
+    padding-left: 50px;
+}
+
+.backEnd{
+    font-size: 16px;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+}
+
+.firstTextAlign {
+    font-size: 16px;
+    width: 70%;
+    line-height: 150%;
+    font-family: 'Roboto';
+    font-weight: lighter;
+}
+.secondTextAlign {
+    font-size: 16px;
+    width: 70%;
+    line-height: 150%;
+    font-family: 'Roboto';
+    font-weight: lighter;
+}
+
+.learn{
+    color: #4A99E2;
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.iconAlign:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+
+.iconAlign{
+    display: flex;
+    flex-direction: row;
+}
+.icon{
+    color: #4A99E2;
+    margin-top: 22px;
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.layersAlign{
+    display: flex;
+    flex-direction: row;
+}
+.layersIcon {
+    color: #4A99E2;
+    font-size: 50px;
+    margin-right: 20px;
+}
+
+.tvIcon {
+    color: #4A99E2;
+    font-size: 50px;
+    margin-right: 20px;
+}
+.brushIcon {
+    color: #4A99E2;
+    font-size: 50px;
+    margin-right: 20px;
+}
+.backEndAlign{
+    margin-top: 15px;
+}
+.frontAlign{
+    margin-top: 15px;
+}
+.digitalAlign{
+    margin-top: 15px;
+}
