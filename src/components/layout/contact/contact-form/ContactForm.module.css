@@ -110,3 +110,9 @@ button:hover:enabled {
 .grey {
   color: rgba(133, 133, 133, 0.5);
 }
+
+@media (max-width: 600px) {
+  #root {
+    padding: 25px 40px;
+  }
+}
