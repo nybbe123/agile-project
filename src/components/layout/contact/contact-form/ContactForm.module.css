@@ -13,9 +13,10 @@ form {
 
 label {
   font-family: "Montserrat", sans-serif;
+  font-size: 12px;
   font-weight: 300;
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   display: flex;
   flex-direction: column;
   position: relative;

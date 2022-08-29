@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-start;
   position: relative;
-  min-height: 700px;
+  min-height: 750px;
   width: 100%;
   gap: 4%;
   overflow-y: hidden;
