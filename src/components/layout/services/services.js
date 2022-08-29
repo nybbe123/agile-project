@@ -1,9 +1,5 @@
 import style from "./services.module.css"
 import serviceImage from "../../../assets/pexels-christina-morillo-1181263.jpg"
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import LayersIcon from '@mui/icons-material/Layers';
-import TvIcon from '@mui/icons-material/Tv';
-import BrushIcon from '@mui/icons-material/Brush';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDisplay, faLayerGroup, faPaintBrush, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
@@ -12,10 +8,9 @@ const Services = () => {
     return <div className={style["serviceSection"]}>
             <div className={style["align"]}>
             <div className={style["textAlign"]}>
-            <h1 className={style["h1Style"]}>Services</h1>
+            <p className={style["h1Style"]}>Services</p>
             <div className={style["text2Align"]}>
             <h2 className={style["whtStyle"]}>WE HAVE THE </h2>
-            <h2></h2>
             <h2 className={style["expStyle"]}>EXPERIENCE</h2>
             </div>
             <p className={style["infoStyle"]}>
@@ -36,10 +31,11 @@ const Services = () => {
                     <h1 className={style["backEnd"]}>BACK-END SERVICES</h1>
                    
                     <p className={style["firstTextAlign"]}>As part of our backend services, we build applications from the ground up. We have experienced developers who work closely with you to determine the best approach when developing your application.</p>
-                   
+                    <div className={style["iconAlign"]}>
                     <span className={style["learn"]}>learn more</span>
                     <FontAwesomeIcon icon={faArrowRight} className={style["icon"]}/>
                
+                    </div>
                     </div>
                 </div>
                 <div className={style["firstBox"]}>
@@ -47,10 +43,11 @@ const Services = () => {
                     <div className={style["frontAlign"]}>
                     <h1 className={style["backEnd"]}>FRONT-END DEVELOPMENT</h1>
                     <p className={style["secondTextAlign"]}>Webly brings a wealth of experience with HTML, CSS and JavaScript to any project We are run by engineers who have been working with frontend libraries such as React and Svelte since the early days. </p>
-                    
+                    <div className={style["iconAlign"]}>
                     <span className={style["learn"]}>learn more</span>
                     <FontAwesomeIcon icon={faArrowRight} className={style["icon"]}/>
                  
+                    </div>
                     </div>
                 </div>
                 <div className={style["firstBox"]}>
@@ -58,9 +55,10 @@ const Services = () => {
                     <div className={style["digitalAlign"]}>
                     <h1 className={style["backEnd"]}>DIGITAL DESIGN</h1>
                     <p className={style["firstTextAlign"]}>We create custom design that strengthens your brand identity, helps you reach new customers as well as fueling up the user experience and expand potential business.</p>
-                   
+                    <div className={style["iconAlign"]}>
                     <span className={style["learn"]}>learn more</span>
                     <FontAwesomeIcon icon={faArrowRight} className={style["icon"]}/>
+                    </div>
                   
                     </div>
                 </div>
