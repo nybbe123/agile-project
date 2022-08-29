@@ -1,5 +1,4 @@
 import style from "./Intro.module.css";
-import IntroBg from "../../../assets/intro-bg.png";
 
 const Intro = () => {
   return (

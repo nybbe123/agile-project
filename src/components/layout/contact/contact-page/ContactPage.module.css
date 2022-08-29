@@ -1,13 +1,12 @@
 #root {
   display: flex;
-  align-items: center;
   justify-content: flex-start;
   position: relative;
   min-height: 700px;
   width: 100%;
   gap: 4%;
   overflow-y: hidden;
-  background-image: url("../../../../assets/contact-bg.svg");
+  background-image: url("../../../../assets/contact-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -14,14 +14,14 @@ const LoginBase = () => {
 
   return (
     <div className={style["login-base"]}>
-      <span
+      <div
         className={style.logo}
         onClick={() => {
           navigate("/");
         }}
       >
         WEBLY
-      </span>
+      </div>
       <div className={style["login-base-form"]}>
         {isLoginPage ? (
           <Login signUpInHandler={loginHandler} />

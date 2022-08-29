@@ -1,4 +1,3 @@
-import contactBg from "../../../../assets/contact-bg.svg";
 import ContactForm from "../contact-form/ContactForm";
 import style from "./ContactPage.module.css";
 
