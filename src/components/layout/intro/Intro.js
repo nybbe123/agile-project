@@ -4,7 +4,7 @@ import IntroBg from "../../../assets/intro-bg.png";
 const Intro = () => {
   return (
     <div id={style.root}>
-      <img src={IntroBg} alt="background" className={style.background} />
+      {/* <img src={IntroBg} alt="background" className={style.background} /> */}
 
       <div className={style.introContainer}>
         <h1 className={style.introHeadingBold}>
