@@ -137,11 +137,6 @@ img {
     transition: 0.5s;
 }
 
-
-.iconAlign{
-    display: flex;
-    flex-direction: row;
-}
 .icon{
     color: #4A99E2;
     margin-top: 22px;
@@ -155,18 +150,18 @@ img {
 }
 .layersIcon {
     color: #4A99E2;
-    font-size: 50px;
+    font-size: 40px;
     margin-right: 20px;
 }
 
 .tvIcon {
     color: #4A99E2;
-    font-size: 50px;
+    font-size: 40px;
     margin-right: 20px;
 }
 .brushIcon {
     color: #4A99E2;
-    font-size: 50px;
+    font-size: 40px;
     margin-right: 20px;
 }
 .backEndAlign{
