@@ -28,6 +28,10 @@ const validate = (values) => {
     errors.password = "Must be atleast 6 characters";
   }
 
+  if (values.terms === false) {
+    errors.terms = "Required";
+  }
+
   return errors;
 };
 
@@ -39,6 +43,7 @@ const Register = (props) => {
       name: "",
       email: "",
       password: "",
+      terms: false,
     },
     validate,
     onSubmit: (values) => {
@@ -100,11 +105,28 @@ const Register = (props) => {
           </div>
         ) : null}
         <div className={style["terms-conditions"]}>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.terms}
+          />
           <span>I agree to terms & conditions</span>
+          {formik.touched.terms && formik.errors.terms ? (
+            <div className={style["error-container"]}>
+              {formik.errors.terms}
+            </div>
+          ) : null}
         </div>
       </div>
-      <Button type={"submit"}>SIGN UP</Button>
+      <Button
+        type={"submit"}
+        disabled={!formik.isValid || formik.values === formik.initialValues}
+      >
+        SIGN UP
+      </Button>
       <div className={style["sign-up-in"]}>
         <p>
           Already have an account?{" "}

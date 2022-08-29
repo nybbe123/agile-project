@@ -10,7 +10,11 @@
   width: 100%;
 }
 
-.button:hover {
+.button:disabled {
+  background-color: #a5ccf1;
+}
+
+.button:hover:enabled {
   cursor: pointer;
   background-color: #2573bb;
 }
