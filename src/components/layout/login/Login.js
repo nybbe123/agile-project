@@ -80,7 +80,12 @@ const Login = (props) => {
           <li>Forgot password?</li>
         </ul>
       </div>
-      <Button type={"submit"}>LOGIN</Button>
+      <Button
+        type={"submit"}
+        disabled={!formik.isValid || formik.values === formik.initialValues}
+      >
+        LOGIN
+      </Button>
       <div className={style["sign-up-in"]}>
         <p>
           Dont have an account?{" "}
