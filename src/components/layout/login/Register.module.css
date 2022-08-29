@@ -1,0 +1,83 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.form-container h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  color: #4a99e2;
+  margin-left: -0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-sub-title {
+  font-family: "Roboto", sans-serif;
+  color: #a5a5a5;
+  letter-spacing: 0.05rem;
+}
+
+.form-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input-container label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  color: #848484;
+  font-size: 0.8rem;
+}
+
+.form-input-container input {
+  border: none;
+  border-bottom: 1px solid #cbcbcb;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  padding-bottom: 0.5rem;
+}
+
+.form-input-container input:focus {
+  outline: none;
+  border-bottom: 2px solid #4a99e2;
+  color: #4a99e2;
+}
+
+.error-container {
+  color: #e24a4a;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.terms-conditions {
+  color: #a5a5a5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.sign-up-in {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #a5a5a5;
+}
+
+.sign-up-in span {
+  color: #4a99e2;
+}
+
+.sign-up-in span:hover,
+.form-input-container li:hover {
+  cursor: pointer;
+}

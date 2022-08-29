@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&family=Montserrat:wght@700&family=Roboto:wght@500&display=swap");
+#root {
+  display: flex;
+  height: 100vh;
+}
+
+.background {
+  width: 100%;
+  min-height: 700px;
+  object-fit: cover;
+  object-position: center top;
+  position: absolute;
+  z-index: -99;
+  left: 0;
+  top: 0;
+}
+
+.introContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 5rem;
+  margin-bottom: 15rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.introHeadingBold {
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.introHeadingRegular {
+  font-weight: 300;
+  font-size: 64px;
+}
+
+.introText {
+  font-weight: 300;
+  font-size: 38px;
+}
+
+.serviceBtn {
+  width: 182px;
+  height: 52px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a99e2;
+  margin-right: 2rem;
+  letter-spacing: 0.2rem;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  cursor: pointer;
+}
+
+.serviceBtn:hover:enabled {
+  background: #2573bb;
+}
+
+.contactBtn:hover:enabled {
+  background: rgba(56, 57, 60, 0.4);
+}
+
+.contactBtn {
+  width: 182px;
+  height: 52px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 3px solid #4a99e2;
+  letter-spacing: 0.2rem;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.btnContainer {
+  margin-top: 3rem;
+}

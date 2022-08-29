@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import style from "./CompanyMap.module.css";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
+import mapStyle from "./mapsStyle.js";
 
 const CompanyMap = () => {
   const center = useMemo(() => ({ lat: 57.7096952, lng: 11.994257 }), []);
@@ -15,6 +16,13 @@ const CompanyMap = () => {
       zoom={15}
       center={center}
       mapContainerClassName={style["map-container"]}
+      options={{
+        apiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+        disableDefaultUI: true, // disable default map UI
+        draggable: true, // make map draggable
+        scaleControl: true, // allow scale control
+        styles: mapStyle,
+      }}
     >
       <MarkerF position={center} />
     </GoogleMap>

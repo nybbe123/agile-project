@@ -1,0 +1,31 @@
+.login-base {
+  position: relative;
+  height: 100vh;
+  display: flex;
+}
+
+.logo {
+  position: absolute;
+  margin-left: 5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.login-base-background {
+  background-image: url("../../../assets/login-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.login-base-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}

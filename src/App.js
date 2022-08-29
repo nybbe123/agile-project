@@ -1,18 +1,22 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./components/layout/Home";
 import Layout from "./components/layout/Layout";
-import MemberList from "./components/member/memberList";
+import LoginBase from "./components/layout/login/LoginBase";
+import { UserContextProvider } from "./context/UserContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={"HOME???"} />
-          <Route path="/team" element={<MemberList />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <UserContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/login" element={<LoginBase />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </UserContextProvider>
   );
 }
 

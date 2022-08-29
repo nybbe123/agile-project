@@ -1,0 +1,58 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+
+  padding: 5rem;
+  background-color: #333;
+  color: #fafafa;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.footer-link {
+  margin-top: 1rem;
+  display: flex;
+  gap: 3rem;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+}
+
+.navlink {
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid #fafafa;
+  border-radius: 8px;
+  gap: 1rem;
+}
+
+.devider {
+  height: 1rem;
+  width: 1px;
+  background-color: #fafafa;
+}
+
+.footer-bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-media {
+  display: flex;
+  gap: 1rem;
+}

@@ -1,0 +1,16 @@
+.button {
+  padding: 1rem 2rem;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #4a99e2;
+  border-radius: 8px;
+  color: #fafafa;
+  letter-spacing: 0.15rem;
+  width: 100%;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #2573bb;
+}
