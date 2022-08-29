@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import UserContext from "../../../context/UserContext";
 import style from "./Header.module.css";
-import { Link } from "react-scroll";
+import { Link as Scroll } from "react-scroll";
 
 const Header = () => {
   const ctx = useContext(UserContext);
@@ -18,7 +18,7 @@ const Header = () => {
       <nav className={style.headerRight}>
         <ul className={style.navLinks}>
           <li className={[style.navItems, style.navMarginRight].join(" ")}>
-            <Link
+            <Scroll
               to="services"
               spy={true}
               smooth={true}
@@ -26,10 +26,10 @@ const Header = () => {
               duration={500}
             >
               SERVICES
-            </Link>
+            </Scroll>
           </li>
           <li className={[style.navItems, style.navMarginRight].join(" ")}>
-            <Link
+            <Scroll
               to="aboutUs"
               spy={true}
               smooth={true}
@@ -37,10 +37,10 @@ const Header = () => {
               duration={500}
             >
               ABOUT US
-            </Link>
+            </Scroll>
           </li>
           <li className={[style.navItems, style.navMarginRight].join(" ")}>
-            <Link
+            <Scroll
               to="contact"
               spy={true}
               smooth={true}
@@ -48,7 +48,7 @@ const Header = () => {
               duration={500}
             >
               CONTACT
-            </Link>
+            </Scroll>
           </li>
           {ctx.isLoggedIn ? (
             <li
