@@ -47,12 +47,12 @@ export const UserContextProvider = (props) => {
     ) {
       setIncorrectInfo(false);
       localStorage.setItem("isLoggedIn", JSON.stringify(userData));
+      setIsLoggedIn(true);
       navigate("/");
     } else {
       console.log("Incorrect!", userData.email, userData.password);
       setIncorrectInfo(true);
     }
-    setIsLoggedIn(true);
   };
 
   const logoutHandler = () => {
