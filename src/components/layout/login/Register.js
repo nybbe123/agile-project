@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import style from "./Register.module.css";
 import Button from "../../UI/Button";
-import { useFormik } from "formik";
+import { useFormik, Form } from "formik";
 import UserContext from "../../../context/UserContext";
 import { useNavigate } from "react-router-dom";
 
@@ -47,9 +47,8 @@ const Register = (props) => {
     },
     validate,
     onSubmit: (values) => {
-      localStorage.setItem("user", JSON.stringify(values));
-      ctx.onLogIn();
-      navigate("/");
+      values.id = values.email;
+      ctx.onRegister(values);
     },
   });
 
@@ -121,6 +120,13 @@ const Register = (props) => {
           ) : null}
         </div>
       </div>
+      {ctx.userExist ? (
+        <div className={style["error-message"]}>
+          <p>Email already exists</p>
+        </div>
+      ) : (
+        ""
+      )}
       <Button
         type={"submit"}
         disabled={!formik.isValid || formik.values === formik.initialValues}
