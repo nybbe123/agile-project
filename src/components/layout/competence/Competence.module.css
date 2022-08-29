@@ -1,0 +1,18 @@
+#root {
+  display: flex;
+  height: 400px;
+  background-image: url("../../../assets/competence-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.competenceContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 5rem;
+  margin-top: 6rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
