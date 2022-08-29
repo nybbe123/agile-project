@@ -1,175 +1,172 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;500&display=swap');
-
 .serviceSection {
-    background-color: #FFFFFF;
-    height: 1000px;
-    font-family: 'Montserrat', 'Roboto';
+  background-color: #ffffff;
+  height: 1000px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .textAlign {
-    padding-top: 150px;
-    padding-left: 50px;
+  padding-top: 150px;
+  padding-left: 50px;
 }
 
 .text2Align {
-    display: flex;
-    flex-direction: row;
-
+  display: flex;
+  flex-direction: row;
 }
 
 .whtStyle {
-    font-weight: bold;
-    margin-bottom: 5px;
-    font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 40px;
 }
 .text2Align:hover {
-    transform: scale(1.1);
-    z-index: 2;
-    transition: 0.5s;
+  transform: scale(1.1);
+  z-index: 2;
+  transition: 0.5s;
 }
-
 
 .expStyle {
-    margin-left: 10px;
-    font-weight: 100;
-    font-size: 30px;
-    color: #474747 ;
-   
+  margin-left: 10px;
+  font-weight: 100;
+  font-size: 40px;
+  color: #474747;
 }
 
-
 .h1Style {
-    font-size: 12px;
-    letter-spacing: 3px;
-    font-weight: 400;
-    margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2.5px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 100;
 }
 
 .infoStyle {
-    font-size: 16px;
-    width: 65%;
-    font-weight: lighter;
-    font-family: 'Roboto';
-    line-height: 150%;
+  font-size: 16px;
+  width: 80%;
+  font-weight: lighter;
+  font-family: "Roboto";
+  line-height: 150%;
 }
 
 .image {
-    width: 700px;
-    padding-top: 100px;
-    padding-right: 200px;
-    position: relative;
+  width: 700px;
+  padding-top: 100px;
+  padding-right: 200px;
+  position: relative;
 }
 .align {
-    display: flex;
-    flex-direction: row;
-    padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 100px;
+  margin-left: 2rem;
 }
 .imgAlign {
-    position: relative;
-    top: 0;
-    left: 0;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .image {
-    transition: 0.5s;
+  transition: 0.5s;
 }
-.image:hover{
-    transform: scale(1.1);
-    z-index: 2;
-    transition: 0.5s;
+.image:hover {
+  transform: scale(1.1);
+  z-index: 2;
+  transition: 0.5s;
 }
 
 .box {
-    position: absolute;
-    top: 70px;
-    left: 130px;
-    width: 400px;
-    height: 340px;
-    background-color: #4A99E2;
+  position: absolute;
+  top: 70px;
+  left: 130px;
+  width: 400px;
+  height: 340px;
+  background-color: #4a99e2;
 }
 
-.boxesAlign{
-    display: flex;
-    flex-direction: row;
+.boxesAlign {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
 }
 
 .firstBox {
-    display: flex;
-    flex-direction: row;
-    margin-top: 110px;
-    padding-left: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 110px;
+  padding-left: 50px;
 }
 
-.backEnd{
-    font-size: 16px;
-    margin-bottom: 5px;
-    letter-spacing: 3px;
+.backEnd {
+  font-size: 16px;
+  margin-bottom: 5px;
+  letter-spacing: 3px;
 }
 
 .firstTextAlign {
-    font-size: 16px;
-    width: 70%;
-    line-height: 150%;
-    font-family: 'Roboto';
-    font-weight: lighter;
+  font-size: 16px;
+  width: 70%;
+  line-height: 150%;
+  font-family: "Roboto";
+  font-weight: lighter;
 }
 .secondTextAlign {
-    font-size: 16px;
-    width: 70%;
-    line-height: 150%;
-    font-family: 'Roboto';
-    font-weight: lighter;
+  font-size: 16px;
+  width: 70%;
+  line-height: 150%;
+  font-family: "Roboto";
+  font-weight: lighter;
 }
 
-.learn{
-    color: #4A99E2;
-    margin-top: 20px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-    letter-spacing: 2px;
+.learn {
+  color: #4a99e2;
+  margin-top: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 2px;
 }
 
 .iconAlign:hover {
-    transform: scale(1.1);
-    z-index: 1;
-    transition: 0.5s;
+  transform: scale(1.1);
+  z-index: 1;
+  transition: 0.5s;
 }
 
-.icon{
-    color: #4A99E2;
-    margin-top: 22px;
-    font-size: 16px;
-    margin-left: 15px;
+.icon {
+  color: #4a99e2;
+  margin-top: 22px;
+  font-size: 16px;
+  margin-left: 15px;
 }
 
-.layersAlign{
-    display: flex;
-    flex-direction: row;
+.layersAlign {
+  display: flex;
+  flex-direction: row;
 }
 .layersIcon {
-    color: #4A99E2;
-    font-size: 40px;
-    margin-right: 20px;
+  color: #4a99e2;
+  font-size: 40px;
+  margin-right: 20px;
 }
 
 .tvIcon {
-    color: #4A99E2;
-    font-size: 40px;
-    margin-right: 20px;
+  color: #4a99e2;
+  font-size: 40px;
+  margin-right: 20px;
 }
 .brushIcon {
-    color: #4A99E2;
-    font-size: 40px;
-    margin-right: 20px;
+  color: #4a99e2;
+  font-size: 40px;
+  margin-right: 20px;
 }
-.backEndAlign{
-    margin-top: 15px;
+.backEndAlign {
+  margin-top: 15px;
 }
-.frontAlign{
-    margin-top: 15px;
+.frontAlign {
+  margin-top: 15px;
 }
-.digitalAlign{
-    margin-top: 15px;
+.digitalAlign {
+  margin-top: 15px;
 }

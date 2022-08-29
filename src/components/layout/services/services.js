@@ -1,27 +1,21 @@
-import style from "./services.module.css";
-import serviceImage from "../../../assets/pexels-christina-morillo-1181263.jpg";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import LayersIcon from "@mui/icons-material/Layers";
-import TvIcon from "@mui/icons-material/Tv";
-import BrushIcon from "@mui/icons-material/Brush";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faArrowRight,
   faDisplay,
   faLayerGroup,
   faPaintBrush,
-  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
-import useRef from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import serviceImage from "../../../assets/pexels-christina-morillo-1181263.jpg";
+import style from "./services.module.css";
 
 const Services = () => {
   return (
     <div id="services" className={style["serviceSection"]}>
       <div className={style["align"]}>
         <div className={style["textAlign"]}>
-          <h1 className={style["h1Style"]}>Services</h1>
+          <p className={style["h1Style"]}>Services</p>
           <div className={style["text2Align"]}>
             <h2 className={style["whtStyle"]}>WE HAVE THE </h2>
-            <h2></h2>
             <h2 className={style["expStyle"]}>EXPERIENCE</h2>
           </div>
           <p className={style["infoStyle"]}>
@@ -54,9 +48,10 @@ const Services = () => {
               you to determine the best approach when developing your
               application.
             </p>
-
-            <span className={style["learn"]}>learn more</span>
-            <FontAwesomeIcon icon={faArrowRight} className={style["icon"]} />
+            <div className={style["iconAlign"]}>
+              <span className={style["learn"]}>learn more</span>
+              <FontAwesomeIcon icon={faArrowRight} className={style["icon"]} />
+            </div>
           </div>
         </div>
         <div className={style["firstBox"]}>
@@ -68,9 +63,10 @@ const Services = () => {
               to any project We are run by engineers who have been working with
               frontend libraries such as React and Svelte since the early days.{" "}
             </p>
-
-            <span className={style["learn"]}>learn more</span>
-            <FontAwesomeIcon icon={faArrowRight} className={style["icon"]} />
+            <div className={style["iconAlign"]}>
+              <span className={style["learn"]}>learn more</span>
+              <FontAwesomeIcon icon={faArrowRight} className={style["icon"]} />
+            </div>
           </div>
         </div>
         <div className={style["firstBox"]}>
@@ -82,11 +78,10 @@ const Services = () => {
               helps you reach new customers as well as fueling up the user
               experience and expand potential business.
             </p>
-
-            <span id="contact" className={style["learn"]}>
-              learn more
-            </span>
-            <FontAwesomeIcon icon={faArrowRight} className={style["icon"]} />
+            <div className={style["iconAlign"]}>
+              <span className={style["learn"]}>learn more</span>
+              <FontAwesomeIcon icon={faArrowRight} className={style["icon"]} />
+            </div>
           </div>
         </div>
       </div>
