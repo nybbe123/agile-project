@@ -1,21 +1,16 @@
 #root {
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
   position: relative;
   min-height: 700px;
   width: 100%;
   gap: 4%;
   overflow-y: hidden;
-}
-
-.background {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  min-height: 700px;
-  object-fit: cover;
-  object-position: center top;
-  z-index: -99;
+  background-image: url("../../../../assets/contact-bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #left {

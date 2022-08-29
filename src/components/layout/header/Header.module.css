@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&display=swap");
 
 .header {
+  position: absolute;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   font-family: "Alegreya Sans SC", sans-serif;
