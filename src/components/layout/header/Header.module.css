@@ -55,5 +55,10 @@
   border: 2px solid #4a99e2;
   border-radius: 8px;
   padding: 0.6rem 1.5rem;
+
   margin-left: 3rem;
+}
+
+.loginOutBtn:hover {
+  background: rgba(56, 57, 60, 0.4);
 }
