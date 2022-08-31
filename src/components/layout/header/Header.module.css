@@ -63,6 +63,10 @@
   background: rgba(56, 57, 60, 0.4);
 }
 
+.burgerMenu {
+  display: none;
+}
+
 @media (max-width: 600px) {
   .headerRight {
     display: none;
@@ -71,5 +75,14 @@
   .logo {
     margin-top: 5rem;
     margin-left: 2rem;
+  }
+
+  .burgerMenu {
+    display: block;
+    margin-top: 5rem;
+    margin-right: 1rem;
+    height: auto;
+    width: 2rem;
+    cursor: pointer;
   }
 }
