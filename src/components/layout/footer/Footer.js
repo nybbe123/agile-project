@@ -1,7 +1,6 @@
-import { LinkedIn, Facebook, Instagram, Email } from "@mui/icons-material";
-import { NavLink } from "react-router-dom";
-import style from "./Footer.module.css";
+import { Facebook, Instagram, LinkedIn } from "@mui/icons-material";
 import { Link as Scroll } from "react-scroll";
+import style from "./Footer.module.css";
 
 const Footer = () => {
   return (
@@ -39,6 +38,11 @@ const Footer = () => {
           CONTACT
         </Scroll>
       </ul>
+      <div className={style.companyAddress}>
+        <h6>Webly AB</h6>
+        <p>Anders Personsgatan 18</p>
+        <p>416 64 Göteborg</p>
+      </div>
       <div className={style["footer-bottom"]}>
         <div className={style["language"]}>
           <span>EN</span>
