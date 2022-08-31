@@ -14,7 +14,7 @@ function MemberCard() {
           <div className={style["memberInfo"]} key={member.id}>
             <img
               className={style["memberPic"]}
-              src={require("../../assets/" + member.namePic + '.png')}
+              src={member.namePic}
               alt={member.name}
             ></img>
             <div className={style["memberText"]}>

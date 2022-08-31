@@ -64,3 +64,54 @@
   font-family: "Montserrat", sans-serif;
   color: #4a99e2;
 }
+
+/** MEDIA QUERY **/
+
+@media (max-width: 900px) {
+  .container {
+    align-items: center;
+  }
+  .memberContainer {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .memberTitleContainer {
+    font-size: 20px;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 478px) {
+  .memberTitleContainer {
+    font-size: 15px;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .memberTitleContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .theFantastic {
+    margin-bottom: 0.5rem;
+  }
+  .memberPic {
+    width: 95px;
+  }
+  .container {
+    margin-left: 3rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .theFantastic {
+    font-size: 1.1rem;
+  }
+  .five {
+    font-size: 1rem;
+  }
+}

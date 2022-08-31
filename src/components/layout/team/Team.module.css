@@ -1,0 +1,239 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+#teamContainer {
+  background-image: url("../../../assets/competence-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 5rem;
+  font-family: "Montserrat", sans-serif;
+  min-height: 550px;
+  color: #fafafa;
+  overflow-y: hidden;
+}
+
+.location {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+.location > a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: rgb(250, 250, 250, 0.5);
+}
+
+#teamContainer > h1 {
+  font-family: "Montserrat", sans-serif;
+  white-space: nowrap;
+  font-size: 64px;
+  margin-top: 2rem;
+  letter-spacing: -1px;
+}
+
+#teamContainer > h2 {
+  font-family: "Montserrat", sans-serif;
+  white-space: nowrap;
+  font-size: 32px;
+  font-weight: 200;
+  letter-spacing: -1px;
+}
+
+#team {
+  background: #fff;
+}
+
+.team-mbr-card-w {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 6rem 5rem;
+  margin: auto;
+}
+
+.team-mbr-card-b {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  padding: 6rem 5rem;
+  background-color: #10182f;
+  color: #fafafa;
+  margin: auto;
+}
+
+.team-mbr-image {
+  display: flex;
+  width: 50%;
+  place-items: center;
+  /* background-color: blue; */
+  max-width: 450px;
+}
+
+.team-mbr-detail {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* background-color: yellow; */
+  max-width: 450px;
+}
+
+.team-mbr-card-w > .team-mbr-image {
+  place-content: start;
+}
+
+.team-mbr-card-b > .team-mbr-image {
+  place-content: end;
+}
+
+.team-mbr-card-w > .team-mbr-image > img {
+  height: 250px;
+  width: auto;
+  box-shadow: -32px -32px 0 -20px #4a99e2;
+}
+
+.team-mbr-card-b > .team-mbr-image > img {
+  height: 250px;
+  width: auto;
+  box-shadow: 32px -32px 0 -20px #4a99e2;
+}
+
+.mbr-title {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+.mbr-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.mbr-intro {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 0.8px;
+  margin: 1rem auto;
+  line-height: 18px;
+}
+
+.mbr-phone-and-email {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  gap: 10px 40px;
+}
+
+@media (max-width: 900px) {
+  #teamContainer {
+    padding-left: 5rem;
+    padding-right: 4rem;
+  }
+  #teamContainer > h1 {
+    white-space: unset;
+  }
+
+  #teamContainer > h2 {
+    white-space: unset;
+  }
+
+  .team-mbr-card-b,
+  .team-mbr-card-w {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .team-mbr-image,
+  .team-mbr-detail {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .team-mbr-detail {
+    margin-top: -50px;
+  }
+
+  .team-mbr-card-w > .team-mbr-image,
+  .team-mbr-card-b > .team-mbr-image {
+    place-content: end;
+  }
+}
+
+@media (max-width: 700px) {
+  #teamContainer > h1 {
+    white-space: unset;
+    font-size: 48px;
+  }
+
+  #teamContainer > h2 {
+    white-space: unset;
+    font-size: 28px;
+  }
+
+  .team-mbr-detail {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  #teamContainer {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  #teamContainer > h1 {
+    font-size: 38px;
+  }
+
+  #teamContainer > h2 {
+    font-size: 22px;
+  }
+
+  .team-mbr-card-w > .team-mbr-image,
+  .team-mbr-card-b > .team-mbr-image {
+    place-content: start;
+  }
+
+  .team-mbr-detail {
+    margin-top: 20px;
+  }
+
+  .mbr-phone-and-email {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .team-mbr-card-w,
+  .team-mbr-card-b {
+    padding: 3rem 0;
+  }
+
+  .team-mbr-card-w > .team-mbr-image > img,
+  .team-mbr-card-b > .team-mbr-image > img {
+    height: 200px;
+  }
+
+  .team-mbr-image,
+  .team-mbr-detail {
+    width: 80%;
+    min-width: 250px;
+    margin: 2rem 2.5rem;
+  }
+}

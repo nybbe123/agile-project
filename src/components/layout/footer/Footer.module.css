@@ -3,8 +3,6 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
-
   padding: 5rem;
   background-color: #333;
   color: #fafafa;
@@ -19,14 +17,17 @@ footer {
 .footer-link {
   margin-top: 1rem;
   display: flex;
+  white-space: nowrap;
   gap: 3rem;
   font-size: 1rem;
   letter-spacing: 0.15rem;
+  margin: 3rem auto;
 }
 
 .navlink {
   text-decoration: none;
   color: #fafafa;
+  cursor: pointer;
 }
 
 .language {
@@ -55,4 +56,36 @@ footer {
 .social-media {
   display: flex;
   gap: 1rem;
+}
+
+.companyAddress {
+  width: 100%;
+  text-align: center;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.companyAddress > h6 {
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  footer {
+    padding: 5rem 1rem;
+    gap: 2.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column-reverse;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-link {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 1rem auto;
+  }
 }
