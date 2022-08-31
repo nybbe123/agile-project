@@ -62,3 +62,14 @@
 .loginOutBtn:hover {
   background: rgba(56, 57, 60, 0.4);
 }
+
+@media (max-width: 600px) {
+  .headerRight {
+    display: none;
+  }
+
+  .logo {
+    margin-top: 5rem;
+    margin-left: 2rem;
+  }
+}
