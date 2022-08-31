@@ -17,22 +17,22 @@ const Intro = () => {
         </h2>
         <div className={style.btnContainer}>
           <Scroll
-            to="services"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-          >
-            <button className={style.serviceBtn}>OUR SERVICES</button>
-          </Scroll>
-          <Scroll
             to="contact"
             spy={true}
             smooth={true}
             offset={50}
             duration={500}
           >
-            <button className={style.contactBtn}>CONTACT US</button>
+            <button className={style.serviceBtn}>CONTACT US</button>
+          </Scroll>
+          <Scroll
+            to="services"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            <button className={style.contactBtn}>OUR SERVICES</button>
           </Scroll>
         </div>
       </div>
