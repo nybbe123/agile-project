@@ -1,5 +1,6 @@
 import style from "./Intro.module.css";
 import { Link as Scroll } from "react-scroll";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Intro = () => {
   return (
@@ -35,6 +36,17 @@ const Intro = () => {
             <button className={style.contactBtn}>CONTACT US</button>
           </Scroll>
         </div>
+      </div>
+      <div className={style.arrowContainer}>
+        <Scroll
+          to="services"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
+        >
+          <ExpandMoreIcon fontSize="large" className={style["arrow"]} />
+        </Scroll>
       </div>
     </div>
   );
