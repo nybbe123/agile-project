@@ -18,9 +18,8 @@ const CompanyMap = () => {
       mapContainerClassName={style["map-container"]}
       options={{
         apiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
-        disableDefaultUI: true, // disable default map UI
-        draggable: true, // make map draggable
-        scaleControl: true, // allow scale control
+        draggable: true, //make map draggable
+        scaleControl: true, //allow scale control
         styles: mapStyle,
       }}
     >
