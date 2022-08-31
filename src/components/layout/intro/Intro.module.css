@@ -90,7 +90,11 @@
 }
 
 @keyframes animation {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -98,5 +102,16 @@
   }
   60% {
     transform: translateY(-12px);
+  }
+}
+
+@media (max-width: 600px) {
+  .btnContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .introContainer {
+    margin-left: 2rem;
   }
 }

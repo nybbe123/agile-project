@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import UserContext from "../../../context/UserContext";
 import style from "./Header.module.css";
 import { Link as Scroll } from "react-scroll";
+import burgerMenu from "../../../assets/burger-menu.png";
 
 const Header = () => {
   const ctx = useContext(UserContext);
@@ -71,6 +72,7 @@ const Header = () => {
           )}
         </ul>
       </nav>
+      <img src={burgerMenu} alt="burgerMenu" className={style.burgerMenu} />
     </header>
   );
 };
