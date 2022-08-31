@@ -8,6 +8,7 @@ import emailjs from "@emailjs/browser";
 const ContactForm = () => {
   const [fontColor, setFontColor] = useState("grey");
   const [sending, setSending] = useState("Send Message");
+  // const [toEmail, setToEmail] = useState("");
 
   const formik = useFormik({
     initialValues: {
@@ -17,6 +18,7 @@ const ContactForm = () => {
       phone: "",
       teammbr: "",
       message: "",
+      to_email: "",
     },
     onSubmit: (values, { resetForm }) => handleSubmit(values, resetForm),
     validationSchema: validationSchema,
@@ -27,11 +29,19 @@ const ContactForm = () => {
     formik.values.teammbr !== "default"
       ? setFontColor("dark")
       : setFontColor("grey");
+
+    if (formik.values.teammbr) {
+      const findMember = memberData.find(
+        (member) => member.name === formik.values.teammbr
+      );
+      formik.values.to_email = findMember.email;
+    }
   }, [formik.values.teammbr]);
 
   // not sure if we wanna reset the form when the user clicks submit so I leave it for now
   const handleSubmit = async (values, resetForm) => {
     setSending("Sending...");
+    console.log(values);
 
     emailjs
       .send("service_b9z5tiu", "template_pxbyowe", values, "4oNZgIst6GSONkyDZ")

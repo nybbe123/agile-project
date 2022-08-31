@@ -1,10 +1,9 @@
-
 export const memberData = [
   {
     name: "Jonatan Nyberg",
     title: "CEO | Webdeveloper",
     phoneNmbr: "(+46) 123 456 789",
-    email: "jonatan@webly.com",
+    email: "nyberg112@gmail.com",
     namePic: "jonatan",
     id: 4,
   },
@@ -13,7 +12,7 @@ export const memberData = [
     name: "Wing Yan Cheung",
     title: "CEO | Webdeveloper",
     phoneNmbr: "(+46) 123 456 789",
-    email: "wing_yan@webly.com",
+    email: "wingyan.cheung@medieinstitutet.se",
     namePic: "millie",
     id: 5,
   },
@@ -29,7 +28,7 @@ export const memberData = [
     name: "Fia Andersson",
     title: "CEO | Webdeveloper",
     phoneNmbr: "(+46) 123 456 789",
-    email: "fia@webly.com",
+    email: "Fiaandersson61@gmail.com",
     namePic: "fia",
     id: 3,
   },
@@ -37,7 +36,7 @@ export const memberData = [
     name: "Ella Larsson",
     title: "CEO | Webdeveloper",
     phoneNmbr: "(+46) 123 456 789",
-    email: "ella@webly.com",
+    email: "ella.larsson0012@gmail.com",
     namePic: "ella",
     id: 1,
   },
