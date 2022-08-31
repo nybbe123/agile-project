@@ -65,6 +65,27 @@
   color: #4a99e2;
 }
 
+.learnmore {
+  margin-top: 4rem;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+
+.learnmore > a {
+  font-family: "Alegreya Sans SC", sans-serif;
+  text-decoration: none;
+  color: #4a99e2;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-right: 0.3rem;
+}
+
+.arrow {
+  color: #4a99e2;
+  font-size: 11px;
+}
+
 /** MEDIA QUERY **/
 
 @media (max-width: 900px) {
