@@ -3,6 +3,7 @@ import { memberData } from "../../member/memberData";
 import style from "./Team.module.css";
 
 const Team = () => {
+  window.scrollTo(0, 0);
   return (
     <div id={style.root}>
       <div id={style.teamContainer}>
