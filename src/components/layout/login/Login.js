@@ -33,9 +33,7 @@ const Login = (props) => {
     },
     validate,
     onSubmit: (values) => {
-      localStorage.setItem("user", JSON.stringify(values));
-      ctx.onLogIn();
-      navigate("/");
+      ctx.onLogIn(values);
     },
   });
 
@@ -80,6 +78,13 @@ const Login = (props) => {
           <li>Forgot password?</li>
         </ul>
       </div>
+      {ctx.incorrectInfo ? (
+        <div className={style["error-message"]}>
+          <p>Incorrect Email or Password</p>
+        </div>
+      ) : (
+        ""
+      )}
       <Button
         type={"submit"}
         disabled={!formik.isValid || formik.values === formik.initialValues}

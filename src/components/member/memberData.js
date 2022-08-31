@@ -1,8 +1,3 @@
-import ellaPicture from "../../assets/ella.png";
-import erikPicture from "../../assets/erik.png";
-import fiaPicture from "../../assets/fia.png";
-import jonatanPicture from "../../assets/jonatan.png";
-import milliePicture from "../../assets/millie.png";
 
 export const memberData = [
   {
@@ -10,7 +5,7 @@ export const memberData = [
     title: "CEO | Webdeveloper",
     phoneNmbr: "(+46) 123 456 789",
     email: "jonatan@webly.com",
-    img: jonatanPicture,
+    namePic: "jonatan",
     id: 4,
   },
 
@@ -19,7 +14,7 @@ export const memberData = [
     title: "CEO | Webdeveloper",
     phoneNmbr: "(+46) 123 456 789",
     email: "wing_yan@webly.com",
-    img: milliePicture,
+    namePic: "millie",
     id: 5,
   },
   {
@@ -27,7 +22,7 @@ export const memberData = [
     title: "CEO | Webdeveloper",
     phoneNmbr: "(+46) 123 456 789",
     email: "erik@webly.com",
-    img: erikPicture,
+    namePic: "erik",
     id: 2,
   },
   {
@@ -35,7 +30,7 @@ export const memberData = [
     title: "CEO | Webdeveloper",
     phoneNmbr: "(+46) 123 456 789",
     email: "fia@webly.com",
-    img: fiaPicture,
+    namePic: "fia",
     id: 3,
   },
   {
@@ -43,7 +38,7 @@ export const memberData = [
     title: "CEO | Webdeveloper",
     phoneNmbr: "(+46) 123 456 789",
     email: "ella@webly.com",
-    img: ellaPicture,
+    namePic: "ella",
     id: 1,
   },
 ];

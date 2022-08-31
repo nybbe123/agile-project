@@ -27,6 +27,7 @@ footer {
 .navlink {
   text-decoration: none;
   color: #fafafa;
+  cursor: pointer;
 }
 
 .language {

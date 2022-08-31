@@ -1,9 +1,9 @@
 import { memberData } from "./memberData";
-import style from '../member/memberSection.module.css';
+import style from "../member/memberSection.module.css";
 
 function MemberCard() {
   return (
-    <div className={style["container"]}>
+    <div id="aboutUs" className={style["container"]}>
       <p className={style["p"]}>ABOUT US</p>
       <div className={style["memberTitleContainer"]}>
         <h2 className={style["theFantastic"]}>THE FANTASTIC</h2>
@@ -14,7 +14,7 @@ function MemberCard() {
           <div className={style["memberInfo"]} key={member.id}>
             <img
               className={style["memberPic"]}
-              src={member.img}
+              src={require("../../assets/" + member.namePic + '.png')}
               alt={member.name}
             ></img>
             <div className={style["memberText"]}>

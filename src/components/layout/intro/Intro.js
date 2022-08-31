@@ -1,4 +1,5 @@
 import style from "./Intro.module.css";
+import { Link as Scroll } from "react-scroll";
 
 const Intro = () => {
   return (
@@ -15,8 +16,24 @@ const Intro = () => {
           over 100 companies
         </h2>
         <div className={style.btnContainer}>
-          <button className={style.serviceBtn}>OUR SERVICES</button>
-          <button className={style.contactBtn}>CONTACT US</button>
+          <Scroll
+            to="services"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            <button className={style.serviceBtn}>OUR SERVICES</button>
+          </Scroll>
+          <Scroll
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            <button className={style.contactBtn}>CONTACT US</button>
+          </Scroll>
         </div>
       </div>
     </div>
