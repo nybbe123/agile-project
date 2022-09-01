@@ -7,7 +7,7 @@ import {
   faHandshakeAngle,
   faCircleInfo,
   faAddressBook,
-  faUser
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import style from "./Header.module.css";
 import { Link as Scroll, scroller } from "react-scroll";
@@ -19,34 +19,33 @@ const Header = () => {
   const linkCtx = useContext(LinkContext);
   const navigate = useNavigate();
 
+  const checkMenu = () => {
+    if (window.innerWidth > 930) {
+      const menu = document.getElementById("hamMenu");
+      menu.style.display = "none";
+    } else if (window.innerWidth < 930) {
+      const menu = document.getElementById("hamMenu");
+      menu.style.display = "block";
+    }
+  };
 
-const checkMenu = () => {
-  if (window.innerWidth > 930) {
-    const menu = document.getElementById("hamMenu");
-    menu.style.display = "none";
-  } else if (window.innerWidth < 930) {
-    const menu = document.getElementById("hamMenu");
-    menu.style.display = "block";
-  }
-}
-  
-window.addEventListener("resize", checkMenu);
+  window.addEventListener("resize", checkMenu);
 
-const menuToggle = () => {
-  const menu = document.getElementById('openedMenu');
-  const hamMenu = document.getElementById('hamMenu');
-  const close = document.getElementById('closeMenu');
-  if ( menu.style.display !== 'flex') {
-     menu.style.display = 'flex';
-     menu.classList.add(style["openMenuStyle"]);
-     hamMenu.style.display = 'none';
-     close.style.display = 'flex';
-  } else {
-    menu.style.display = 'none';
-    close.style.display = 'none';
-    hamMenu.style.display = 'flex';
-  }
-}
+  const menuToggle = () => {
+    const menu = document.getElementById("openedMenu");
+    const hamMenu = document.getElementById("hamMenu");
+    const close = document.getElementById("closeMenu");
+    if (menu.style.display !== "flex") {
+      menu.style.display = "flex";
+      menu.classList.add(style["openMenuStyle"]);
+      hamMenu.style.display = "none";
+      close.style.display = "flex";
+    } else {
+      menu.style.display = "none";
+      close.style.display = "none";
+      hamMenu.style.display = "flex";
+    }
+  };
 
   const scrollTarget = (target) => {
     scroller.scrollTo(target, { smooth: true, duration: 500 });
@@ -198,11 +197,11 @@ const menuToggle = () => {
               CONTACT
             </Scroll>
           </li>
-          {ctx.isLoggedIn ? (
+          {userCtx.isLoggedIn ? (
             <li
               className={[style.loginOutBtn]}
               onClick={() => {
-                ctx.onLogout();
+                userCtx.onLogout();
               }}
             >
               <FontAwesomeIcon style={{ fontSize: "1.5rem" }} icon={faUser} />
