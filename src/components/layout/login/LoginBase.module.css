@@ -18,20 +18,24 @@
 }
 
 .logo-and-form {
+  position: relative;
   width: 50%;
   flex-direction: column;
   padding: 1rem 4rem;
   min-width: 250px;
-  /* background-color: yellow; */
 }
 
 .login-base-form {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
   min-width: 250px;
-  margin-top: 1rem;
+  width: 100%;
+  padding: 0 2rem;
 }
 
 .login-base-background {
@@ -56,10 +60,22 @@
 @media (max-width: 600px) {
   .logo-and-form {
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem 1.6rem;
   }
 
   .login-base-background {
     width: 0%;
+  }
+}
+
+@media (max-width: 450px) {
+  .login-base-form {
+    top: 20%;
+  }
+}
+
+@media (max-width: 375px) {
+  .login-base-form {
+    top: 13%;
   }
 }
