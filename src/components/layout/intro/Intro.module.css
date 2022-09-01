@@ -114,4 +114,55 @@
   .introContainer {
     margin-left: 2rem;
   }
+
+  .introText {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  .btnContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .introText {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 550px) {
+  .arrowContainer {
+    display: none;
+  }
+
+  .introText {
+    font-size: 22px;
+  }
+
+  .introHeadingBold {
+    font-size: 50px;
+  }
+
+  .introHeadingRegular {
+    font-size: 50px;
+  }
+
+  .contactBtn {
+    width: 150px;
+    height: 50px;
+    font-size: 0.7rem;
+  }
+
+  .serviceBtn {
+    width: 150px;
+    height: 50px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 695px) {
+  .introContainer {
+    margin-left: 2rem;
+  }
 }
