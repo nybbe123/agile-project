@@ -8,8 +8,8 @@ const LinkContext = React.createContext({
 export const LinkContextProvider = (props) => {
   const [isDetail, setIsDetail] = useState(false);
 
-  const navigateHandler = (data) => {
-    setIsDetail(data);
+  const navigateHandler = (boolean) => {
+    setIsDetail(boolean);
   };
 
   return (
