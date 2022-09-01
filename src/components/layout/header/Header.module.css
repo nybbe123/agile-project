@@ -16,7 +16,7 @@
 
 .logo {
   position: absolute;
-  margin-left: 5rem;
+  margin-left: 4rem;
   margin-top: 1rem;
   cursor: pointer;
   font-family: "Alegreya Sans SC", sans-serif;
@@ -56,7 +56,6 @@
   border: 2px solid #4a99e2;
   border-radius: 8px;
   padding: 0.6rem 1.5rem;
-
   margin-left: 3rem;
 }
 
@@ -76,7 +75,7 @@
   background-color: #333;
   position: absolute;
   width: 100%;
-  height: 30rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,35 +88,61 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 4.5rem;
-  margin-top: 2rem;
+  gap: 2.5rem;
   align-items: center;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 2.5px;
   font-size: 1rem;
   margin-bottom: 0.5rem;
+  letter-spacing: 2.5px;
+}
+
+.openMenuStyle ul li {
+  width: 18rem;
+  height: 3.3rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  column-gap: 2rem;
 }
 
 .openMenuStyle ul li:hover {
   cursor: pointer;
+  background-color: #4a98e244;
+  color: #54acff;
 }
 
-@media (max-width: 600px) {
+.openMenuStyle ul li:active {
+  cursor: pointer;
+  background-color: #4a98e23d;
+  color: #54acff;
+}
+
+@media (max-width: 930px) {
   .headerRight {
     display: none;
   }
 
   .logo {
-    margin-left: 2rem;
-    margin-top: 2rem;
+    margin-left: 1.3rem;
+    margin-top: 1rem;
   }
 
   .burgerMenu {
     display: block;
-    margin-top: 1.2rem;
-    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-right: 1.7rem;
     height: auto;
     width: 1.5rem;
     cursor: pointer;
   }
 }
+
+@media (max-width: 330px) {
+.openMenuStyle ul li {
+  width: 15rem;
+}
+}
+
+

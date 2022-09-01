@@ -5,7 +5,11 @@ import { Link as Scroll } from "react-scroll";
 import burgerMenu from "../../../assets/burger-menu.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faXmark
+  faXmark,
+  faHandshakeAngle,
+  faCircleInfo,
+  faAddressBook,
+  faUser
 } from "@fortawesome/free-solid-svg-icons";
 import style from "./Header.module.css";
 
@@ -13,7 +17,19 @@ const Header = () => {
   const ctx = useContext(UserContext);
   const navigate = useNavigate();
 
- const menuToggle = () => {
+const checkMenu = () => {
+  if (window.innerWidth > 930) {
+    const menu = document.getElementById("hamMenu");
+    menu.style.display = "none";
+  } else if (window.innerWidth < 930) {
+    const menu = document.getElementById("hamMenu");
+    menu.style.display = "block";
+  }
+}
+  
+window.addEventListener("resize", checkMenu);
+
+const menuToggle = () => {
   const menu = document.getElementById('openedMenu');
   const hamMenu = document.getElementById('hamMenu');
   const close = document.getElementById('closeMenu');
@@ -94,9 +110,51 @@ const Header = () => {
       </nav>
       <div id="openedMenu" className={[style.openedMenuClass]}>
         <ul>
-          <li>SERVICES</li>
-          <li>ABOUT US</li>
-          <li>CONTACT</li>
+          <li>
+            <FontAwesomeIcon
+              icon={faHandshakeAngle}
+              style={{ fontSize: "1.5rem" }}
+            />
+            <Scroll
+              to="services"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              SERVICES
+            </Scroll>
+          </li>
+          <li>
+            <FontAwesomeIcon
+              style={{ fontSize: "1.5rem" }}
+              icon={faCircleInfo}
+            />
+            <Scroll
+              to="aboutUs"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              ABOUT US
+            </Scroll>
+          </li>
+          <li>
+            <FontAwesomeIcon
+              style={{ fontSize: "1.5rem" }}
+              icon={faAddressBook}
+            />
+            <Scroll
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              CONTACT
+            </Scroll>
+          </li>
           {ctx.isLoggedIn ? (
             <li
               className={[style.loginOutBtn]}
@@ -104,6 +162,7 @@ const Header = () => {
                 ctx.onLogout();
               }}
             >
+              <FontAwesomeIcon style={{ fontSize: "1.5rem" }} icon={faUser} />
               LOGOUT
             </li>
           ) : (
@@ -113,6 +172,7 @@ const Header = () => {
                 navigate("/login");
               }}
             >
+              <FontAwesomeIcon style={{ fontSize: "1.5rem" }} icon={faUser} />
               LOGIN
             </li>
           )}
@@ -132,9 +192,9 @@ const Header = () => {
         style={{
           display: "none",
           fontSize: "1.7rem",
-          marginTop: "1rem",
-          marginRight: "1rem",
-          zIndex: '1',
+          marginTop: ".8rem",
+          marginRight: "1.7rem",
+          zIndex: "1",
         }}
       />
     </header>
