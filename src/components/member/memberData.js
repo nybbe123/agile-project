@@ -12,7 +12,7 @@ export const memberData = [
     email: "nyberg112@gmail.com",
     namePic: jonatan,
     intro:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "As the CEO of Webly it is of importance to set a clear vision for the furute of Webly as well as keeping the team togheter. Jonatan has an strong passion for customer relationships and values sustainable and longterm relations. As an expert of processdriven Design and both front- & backend development there are no problem to hard to handle, only great solutions!",
     id: 4,
   },
 
