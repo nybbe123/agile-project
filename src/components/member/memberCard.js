@@ -30,7 +30,7 @@ function MemberCard() {
         ))}
       </div>
       <p className={style.learnmore}>
-        <Link to="/team">LEARN MORE ABOUT US</Link>
+        <Link to="/team">MORE ABOUT US</Link>
         <FontAwesomeIcon icon={faArrowRight} className={style.arrow} />
       </p>
     </div>
