@@ -7,9 +7,14 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import serviceImage from "../../../assets/pexels-christina-morillo-1181263.jpg";
 import style from "./services.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import LinkContext from "../../../context/LinkContext";
 
 const Services = () => {
+  const linkCtx = useContext(LinkContext);
+  const navigate = useNavigate();
+
   return (
     <div id="services" className={style["serviceSection"]}>
       <div className={style["align"]}>
@@ -50,13 +55,19 @@ const Services = () => {
               application.
             </p>
             <div className={style["iconAlign"]}>
-              <Link style={{ textDecoration: "none" }} to="/backEnd">
-                <span className={style["learn"]}>LEARN MORE</span>
+              <li
+                style={{ textDecoration: "none" }}
+                onClick={() => {
+                  linkCtx.onNavigate(true);
+                  navigate("/backEnd");
+                }}
+              >
+                <span className={style["learn"]}>learn more</span>
                 <FontAwesomeIcon
                   icon={faArrowRight}
                   className={style["icon"]}
                 />
-              </Link>
+              </li>
             </div>
           </div>
         </div>
@@ -70,13 +81,19 @@ const Services = () => {
               frontend libraries such as React and Svelte since the early days.{" "}
             </p>
             <div className={style["iconAlign"]}>
-              <Link style={{ textDecoration: "none" }} to="/frontEnd">
-                <span className={style["learn"]}>LEARN MORE</span>
+              <li
+                style={{ textDecoration: "none" }}
+                onClick={() => {
+                  linkCtx.onNavigate(true);
+                  navigate("/frontEnd");
+                }}
+              >
+                <span className={style["learn"]}>learn more</span>
                 <FontAwesomeIcon
                   icon={faArrowRight}
                   className={style["icon"]}
                 />
-              </Link>
+              </li>
             </div>
           </div>
         </div>
@@ -90,13 +107,19 @@ const Services = () => {
               experience and expand potential business.
             </p>
             <div className={style["iconAlign"]}>
-              <Link style={{ textDecoration: "none" }} to="/digitalDesign">
-                <span className={style["learn"]}>LEARN MORE</span>
+              <li
+                style={{ textDecoration: "none" }}
+                onClick={() => {
+                  linkCtx.onNavigate(true);
+                  navigate("/digitalDesign");
+                }}
+              >
+                <span className={style["learn"]}>learn more</span>
                 <FontAwesomeIcon
                   icon={faArrowRight}
                   className={style["icon"]}
                 />
-              </Link>
+              </li>
             </div>
           </div>
         </div>

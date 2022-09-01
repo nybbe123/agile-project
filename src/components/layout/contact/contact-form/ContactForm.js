@@ -44,7 +44,13 @@ const ContactForm = () => {
     console.log(values);
 
     emailjs
-      .send("service_b9z5tiu", "template_pxbyowe", values, "4oNZgIst6GSONkyDZ")
+      .send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        values,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      // .send("service_b9z5tiu", "template_pxbyowe", values, "4oNZgIst6GSONkyDZ")
       .then(
         (result) => {
           setSending("Message sent!");

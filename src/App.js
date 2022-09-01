@@ -9,21 +9,24 @@ import Layout from "./components/layout/Layout";
 import LoginBase from "./components/layout/login/LoginBase";
 import Team from "./components/layout/team/Team";
 import { UserContextProvider } from "./context/UserContext";
+import { LinkContextProvider } from "./context/LinkContext";
 
 function App() {
   return (
     <UserContextProvider>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/frontEnd" element={<FrontEndPage />} />
-          <Route path="/backEnd" element={<BackEndPage />} />
-          <Route path="/digitalDesign" element={<DesignPage />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/competence" element={<Competence />} />
-        </Route>
-        <Route path="/login" element={<LoginBase />} />
-      </Routes>
+      <LinkContextProvider>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/frontEnd" element={<FrontEndPage />} />
+            <Route path="/backEnd" element={<BackEndPage />} />
+            <Route path="/digitalDesign" element={<DesignPage />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/competence" element={<Competence />} />
+          </Route>
+          <Route path="/login" element={<LoginBase />} />
+        </Routes>
+      </LinkContextProvider>
     </UserContextProvider>
   );
 }

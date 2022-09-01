@@ -5,13 +5,33 @@
 }
 
 .logo {
-  position: absolute;
-  margin-left: 5rem;
-  margin-top: 1rem;
   cursor: pointer;
   font-family: "Alegreya Sans SC", sans-serif;
   font-size: 2rem;
   font-weight: bold;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.logo-and-form {
+  width: 50%;
+  flex-direction: column;
+  padding: 1rem 4rem;
+  min-width: 250px;
+  /* background-color: yellow; */
+}
+
+.login-base-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  min-width: 250px;
+  margin-top: 1rem;
 }
 
 .login-base-background {
@@ -19,13 +39,27 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 50%;
 }
 
-.login-base-form {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
+@media (max-width: 900px) {
+  .logo-and-form {
+    padding: 1rem 3rem;
+    width: 70%;
+  }
+
+  .login-base-background {
+    width: 30%;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-and-form {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .login-base-background {
+    width: 0%;
+  }
 }
