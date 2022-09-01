@@ -2,6 +2,8 @@ import {
   faDisplay,
   faLayerGroup,
   faPaintBrush,
+  faCode,
+  faLaptopCode,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import serviceImage from "../../../assets/pexels-christina-morillo-1181263.jpg";
@@ -32,10 +34,7 @@ const FrontEndPage = () => {
 
         <div className={style["boxesAlign"]}>
           <div className={style["firstBox"]}>
-            <FontAwesomeIcon
-              icon={faLayerGroup}
-              className={style["layersIcon"]}
-            />
+            <FontAwesomeIcon icon={faCode} className={style["layersIcon"]} />
             <div className={style["backEndAlign"]}>
               <h1 className={style["backEnd"]}>HTML</h1>
 
@@ -59,7 +58,7 @@ const FrontEndPage = () => {
           </div>
           <div className={style["firstBox"]}>
             <FontAwesomeIcon
-              icon={faPaintBrush}
+              icon={faLaptopCode}
               className={style["brushIcon"]}
             />
             <div className={style["digitalAlign"]}>

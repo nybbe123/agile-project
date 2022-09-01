@@ -62,7 +62,7 @@ const Services = () => {
                   navigate("/backEnd");
                 }}
               >
-                <span className={style["learn"]}>learn more</span>
+                <span className={style["learn"]}>LEARN MORE</span>
                 <FontAwesomeIcon
                   icon={faArrowRight}
                   className={style["icon"]}
@@ -88,7 +88,7 @@ const Services = () => {
                   navigate("/frontEnd");
                 }}
               >
-                <span className={style["learn"]}>learn more</span>
+                <span className={style["learn"]}>LEARN MORE</span>
                 <FontAwesomeIcon
                   icon={faArrowRight}
                   className={style["icon"]}
@@ -114,7 +114,7 @@ const Services = () => {
                   navigate("/digitalDesign");
                 }}
               >
-                <span className={style["learn"]}>learn more</span>
+                <span className={style["learn"]}>LEARN MORE</span>
                 <FontAwesomeIcon
                   icon={faArrowRight}
                   className={style["icon"]}

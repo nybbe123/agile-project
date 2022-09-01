@@ -33,7 +33,10 @@ const DesignPage = () => {
 
         <div className={style["boxesAlign"]}>
           <div className={style["firstBox"]}>
-            <FontAwesomeIcon icon={faPalette} className={style["layersIcon"]} />
+            <FontAwesomeIcon
+              icon={faComputerMouse}
+              className={style["layersIcon"]}
+            />
             <div className={style["backEndAlign"]}>
               <h1 className={style["backEnd"]}>UX</h1>
 
@@ -46,10 +49,7 @@ const DesignPage = () => {
             </div>
           </div>
           <div className={style["firstBox"]}>
-            <FontAwesomeIcon
-              icon={faComputerMouse}
-              className={style["tvIcon"]}
-            />
+            <FontAwesomeIcon icon={faPalette} className={style["tvIcon"]} />
             <div className={style["frontAlign"]}>
               <h1 className={style["backEnd"]}>UI</h1>
               <p className={style["firstTextAlign"]}>
