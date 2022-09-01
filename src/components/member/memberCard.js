@@ -1,5 +1,8 @@
-import { memberData } from "./memberData";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import style from "../member/memberSection.module.css";
+import { memberData } from "./memberData";
 
 function MemberCard() {
   return (
@@ -14,7 +17,7 @@ function MemberCard() {
           <div className={style["memberInfo"]} key={member.id}>
             <img
               className={style["memberPic"]}
-              src={require("../../assets/" + member.namePic + '.png')}
+              src={member.namePic}
               alt={member.name}
             ></img>
             <div className={style["memberText"]}>
@@ -26,6 +29,10 @@ function MemberCard() {
           </div>
         ))}
       </div>
+      <p className={style.learnmore}>
+        <Link to="/team">LEARN MORE ABOUT US</Link>
+        <FontAwesomeIcon icon={faArrowRight} className={style.arrow} />
+      </p>
     </div>
   );
 }

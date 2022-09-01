@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-start;
   position: relative;
-  min-height: 700px;
+  min-height: 750px;
   width: 100%;
   gap: 4%;
   overflow-y: hidden;
@@ -47,4 +47,46 @@
   height: fit-content;
   margin: auto;
   border-radius: 0 0 8px 8px;
+}
+
+@media (max-width: 900px) {
+  .root {
+    flex-direction: column;
+  }
+
+  #left {
+    width: 100%;
+    padding: 60px 70px 0 70px;
+  }
+
+  #right {
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 48px;
+  }
+
+  #form-container {
+    border-radius: 8px;
+    margin: 30px auto 60px auto;
+  }
+}
+
+@media (max-width: 600px) {
+  #left {
+    padding: 50px 30px 0 30px;
+    margin: auto;
+  }
+
+  .heading {
+    font-size: 38px;
+  }
+
+  #form-container {
+    min-width: 280px;
+    width: 90%;
+    max-width: 400px;
+    margin: 30px auto 50px auto;
+  }
 }
