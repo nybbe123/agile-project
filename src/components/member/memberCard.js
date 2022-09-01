@@ -33,17 +33,17 @@ function MemberCard() {
           </div>
         ))}
       </div>
-      <p className={style.learnmore}>
-        <li
+      <div className={style.learnmore}>
+        <p
           onClick={() => {
             linkCtx.onNavigate(true);
             navigate("/team");
           }}
         >
           MORE ABOUT US
-        </li>
+        </p>
         <FontAwesomeIcon icon={faArrowRight} className={style.arrow} />
-      </p>
+      </div>
     </div>
   );
 }

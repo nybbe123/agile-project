@@ -69,9 +69,10 @@
   display: flex;
   place-content: center;
   place-items: center;
+  cursor: pointer;
 }
 
-.learnmore > a {
+.learnmore > p {
   font-family: "Alegreya Sans SC", sans-serif;
   text-decoration: none;
   color: #4a99e2;
