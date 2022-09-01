@@ -40,9 +40,8 @@ function MemberCard() {
             navigate("/team");
           }}
         >
-          LEARN MORE ABOUT US
+          MORE ABOUT US
         </li>
-
         <FontAwesomeIcon icon={faArrowRight} className={style.arrow} />
       </p>
     </div>
