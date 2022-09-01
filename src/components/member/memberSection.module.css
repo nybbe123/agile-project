@@ -103,6 +103,9 @@
     font-size: 20px;
     padding-bottom: 3rem;
   }
+  .memberText {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 478px) {
@@ -124,15 +127,32 @@
     width: 95px;
   }
   .container {
-    margin-left: 3rem;
+    margin-left: 0;
+  }
+
+  .memberText {
+    font-size: 0.8rem;
+  }
+
+  .memberInfo {
+    width: 300px;
   }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 350px) {
   .theFantastic {
     font-size: 1.1rem;
   }
   .five {
     font-size: 1rem;
+  }
+  .memberPic {
+    width: 140px;
+  }
+  .memberInfo {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 1rem;
   }
 }
