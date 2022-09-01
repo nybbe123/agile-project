@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&display=swap");
-
 .header {
   position: absolute;
   width: 100%;
@@ -7,6 +5,7 @@
   justify-content: space-between;
   font-family: "Alegreya Sans SC", sans-serif;
   color: white;
+  padding-top: 0.8rem;
 }
 
 .headerLeft {
@@ -46,6 +45,7 @@
   padding-left: 1rem;
   cursor: pointer;
   letter-spacing: 0.2rem;
+  text-transform: uppercase;
 }
 
 .navMarginRight {
@@ -57,23 +57,26 @@
   border-radius: 8px;
   padding: 0.6rem 1.5rem;
   margin-left: 3rem;
+  display: flex;
+  place-items: center;
 }
 
 .loginOutBtn:hover {
   background: rgba(56, 57, 60, 0.4);
 }
-
+/* 
 .burgerMenu {
   display: none;
-}
-
+} */
+/* 
 .openedMenuClass {
   display: none;
-}
+} */
 
 .openMenuStyle {
   background-color: #333;
   position: absolute;
+  top: 0;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -97,7 +100,7 @@
   letter-spacing: 2.5px;
 }
 
-.openMenuStyle ul li {
+/* .openMenuStyle ul li {
   width: 18rem;
   height: 3.3rem;
   border-radius: 4px;
@@ -105,15 +108,28 @@
   align-items: center;
   padding-left: 2rem;
   column-gap: 2rem;
+} */
+
+.scrollLink {
+  width: 180px;
+  height: 3.3rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  column-gap: 1.5rem;
+  text-transform: uppercase;
 }
 
-.openMenuStyle ul li:hover {
+/* .openMenuStyle ul li:hover, */
+.scrollLink:hover {
   cursor: pointer;
   background-color: #4a98e244;
   color: #54acff;
 }
 
-.openMenuStyle ul li:active {
+/* .openMenuStyle ul li:active, */
+.scrollLink:active {
   cursor: pointer;
   background-color: #4a98e23d;
   color: #54acff;
@@ -140,9 +156,7 @@
 }
 
 @media (max-width: 330px) {
-.openMenuStyle ul li {
-  width: 15rem;
+  .openMenuStyle ul li {
+    width: 15rem;
+  }
 }
-}
-
-
