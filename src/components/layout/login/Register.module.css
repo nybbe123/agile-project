@@ -1,17 +1,19 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
   width: 100%;
   max-width: 30rem;
+  min-width: 250px;
 }
 
 .form-container h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #4a99e2;
   margin-left: -0.3rem;
   margin-bottom: 0.5rem;
+  /* white-space: nowrap; */
 }
 
 .form-sub-title {
@@ -78,6 +80,10 @@
   align-items: center;
 }
 
+.terms-conditions > input {
+  margin: 0;
+}
+
 .sign-up-in {
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -93,4 +99,33 @@
 .sign-up-in span:hover,
 .form-input-container li:hover {
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .form-container h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .form-container h2 {
+    font-size: 2.15rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-container h2 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .form-sub-title {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 485px) {
+  .form-container h2 {
+    font-size: 2.2rem;
+  }
 }

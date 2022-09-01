@@ -1,12 +1,14 @@
 import { useFormik } from "formik";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { memberData } from "../../../member/memberData";
 import style from "./ContactForm.module.css";
 import { validationSchema } from "./ContactFormValidationSchema";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const [fontColor, setFontColor] = useState("grey");
-  const [sending, setSending] = useState(false);
+  const [sending, setSending] = useState("Send Message");
+  // const [toEmail, setToEmail] = useState("");
 
   const formik = useFormik({
     initialValues: {
@@ -14,8 +16,9 @@ const ContactForm = () => {
       company: "",
       email: "",
       phone: "",
-      teammbr: "default",
+      teammbr: "",
       message: "",
+      to_email: "",
     },
     onSubmit: (values, { resetForm }) => handleSubmit(values, resetForm),
     validationSchema: validationSchema,
@@ -26,15 +29,37 @@ const ContactForm = () => {
     formik.values.teammbr !== "default"
       ? setFontColor("dark")
       : setFontColor("grey");
+
+    if (formik.values.teammbr) {
+      const findMember = memberData.find(
+        (member) => member.name === formik.values.teammbr
+      );
+      formik.values.to_email = findMember.email;
+    }
   }, [formik.values.teammbr]);
 
   // not sure if we wanna reset the form when the user clicks submit so I leave it for now
   const handleSubmit = async (values, resetForm) => {
-    setSending(true);
-    setTimeout(() => {
-      setSending(false);
-      resetForm();
-    }, 2000);
+    setSending("Sending...");
+    console.log(values);
+
+    emailjs
+      .send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        values,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      // .send("service_b9z5tiu", "template_pxbyowe", values, "4oNZgIst6GSONkyDZ")
+      .then(
+        (result) => {
+          setSending("Message sent!");
+          resetForm();
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
   };
 
   return (
@@ -111,7 +136,11 @@ const ContactForm = () => {
             Select person to contact
           </option>
           {memberData.map((mbr) => (
-            <option value={mbr.name} key={mbr.id}>
+            <option
+              value={mbr.name}
+              onChange={formik.handleChange}
+              key={mbr.id}
+            >
               {mbr.name}
             </option>
           ))}
@@ -145,7 +174,7 @@ const ContactForm = () => {
         disabled={!formik.isValid || formik.values === formik.initialValues}
         type="submit"
       >
-        {sending ? "Sending..." : "Send Message"}
+        {sending}
       </button>
     </form>
   );

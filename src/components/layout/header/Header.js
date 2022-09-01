@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import UserContext from "../../../context/UserContext";
-import { Link as Scroll } from "react-scroll";
-import burgerMenu from "../../../assets/burger-menu.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faXmark,
@@ -12,10 +10,15 @@ import {
   faUser
 } from "@fortawesome/free-solid-svg-icons";
 import style from "./Header.module.css";
+import { Link as Scroll, scroller } from "react-scroll";
+import burgerMenu from "../../../assets/burger-menu.png";
+import LinkContext from "../../../context/LinkContext";
 
 const Header = () => {
-  const ctx = useContext(UserContext);
+  const userCtx = useContext(UserContext);
+  const linkCtx = useContext(LinkContext);
   const navigate = useNavigate();
+
 
 const checkMenu = () => {
   if (window.innerWidth > 930) {
@@ -45,6 +48,16 @@ const menuToggle = () => {
   }
 }
 
+  const scrollTarget = (target) => {
+    scroller.scrollTo(target, { smooth: true, duration: 500 });
+  };
+
+  const scrollToPage = async (target) => {
+    linkCtx.onNavigate(false);
+    await navigate("/");
+    scrollTarget(target);
+  };
+
   return (
     <header className={style.header}>
       <div className={style.headerLeft}>
@@ -55,43 +68,73 @@ const menuToggle = () => {
       <nav className={style.headerRight}>
         <ul className={style.navLinks}>
           <li className={[style.navItems, style.navMarginRight].join(" ")}>
-            <Scroll
-              to="services"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-            >
-              SERVICES
-            </Scroll>
+            {linkCtx.isDetail === false ? (
+              <Scroll
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                SERVICES
+              </Scroll>
+            ) : (
+              <div
+                onClick={() => {
+                  scrollToPage("services");
+                }}
+              >
+                SERVICES
+              </div>
+            )}
           </li>
           <li className={[style.navItems, style.navMarginRight].join(" ")}>
-            <Scroll
-              to="aboutUs"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-            >
-              ABOUT US
-            </Scroll>
+            {linkCtx.isDetail === false ? (
+              <Scroll
+                to="aboutUs"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                ABOUT US
+              </Scroll>
+            ) : (
+              <div
+                onClick={() => {
+                  scrollToPage("aboutUs");
+                }}
+              >
+                ABOUT US
+              </div>
+            )}
           </li>
           <li className={[style.navItems, style.navMarginRight].join(" ")}>
-            <Scroll
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-            >
-              CONTACT
-            </Scroll>
+            {linkCtx.isDetail === false ? (
+              <Scroll
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                CONTACT
+              </Scroll>
+            ) : (
+              <div
+                onClick={() => {
+                  scrollToPage("contact");
+                }}
+              >
+                CONTACT
+              </div>
+            )}
           </li>
-          {ctx.isLoggedIn ? (
+          {userCtx.isLoggedIn ? (
             <li
               className={[style.loginOutBtn]}
               onClick={() => {
-                ctx.onLogout();
+                userCtx.onLogout();
               }}
             >
               LOGOUT

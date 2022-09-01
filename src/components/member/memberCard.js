@@ -1,7 +1,14 @@
-import { memberData } from "./memberData";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import LinkContext from "../../context/LinkContext";
 import style from "../member/memberSection.module.css";
+import { memberData } from "./memberData";
 
 function MemberCard() {
+  const linkCtx = useContext(LinkContext);
+  const navigate = useNavigate();
   return (
     <div id="aboutUs" className={style["container"]}>
       <p className={style["p"]}>ABOUT US</p>
@@ -14,7 +21,7 @@ function MemberCard() {
           <div className={style["memberInfo"]} key={member.id}>
             <img
               className={style["memberPic"]}
-              src={require("../../assets/" + member.namePic + '.png')}
+              src={member.namePic}
               alt={member.name}
             ></img>
             <div className={style["memberText"]}>
@@ -25,6 +32,17 @@ function MemberCard() {
             </div>
           </div>
         ))}
+      </div>
+      <div className={style.learnmore}>
+        <p
+          onClick={() => {
+            linkCtx.onNavigate(true);
+            navigate("/team");
+          }}
+        >
+          MORE ABOUT US
+        </p>
+        <FontAwesomeIcon icon={faArrowRight} className={style.arrow} />
       </div>
     </div>
   );

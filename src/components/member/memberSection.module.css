@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;500&display=swap");
-
 .container {
   display: flex;
   flex-direction: column;
@@ -7,7 +5,7 @@
   margin-right: 3rem;
   padding-top: 4rem;
   padding-bottom: 6rem;
-  max-width: 250rem;
+  max-width: 2200px;
   color: #333333;
 }
 
@@ -36,7 +34,7 @@
 
 .memberContainer {
   display: flex;
-  column-gap: 12rem;
+  column-gap: 3rem;
   row-gap: 4rem;
   flex-wrap: wrap;
 }
@@ -48,6 +46,7 @@
 
 .memberInfo {
   display: flex;
+  width: 400px;
 }
 
 .memberText {
@@ -65,53 +64,75 @@
   color: #4a99e2;
 }
 
+.learnmore {
+  margin-top: 4rem;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  cursor: pointer;
+}
+
+.learnmore > p {
+  font-family: "Alegreya Sans SC", sans-serif;
+  text-decoration: none;
+  color: #4a99e2;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-right: 0.3rem;
+}
+
+.arrow {
+  color: #4a99e2;
+  font-size: 11px;
+}
+
 /** MEDIA QUERY **/
 
-@media (max-width: 879px) { 
-.container {
-  align-items: center;
-}
-.memberContainer {
-  align-items: center;
-  justify-content: center;
-}
-}
-
-@media (max-width: 618px) { 
-.memberTitleContainer {
-  font-size: 20px;
-  padding-bottom: 3rem;
-}
+@media (max-width: 900px) {
+  .container {
+    align-items: center;
+  }
+  .memberContainer {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-@media (max-width: 478px) { 
-.memberTitleContainer {
-  font-size: 15px;
-  padding-bottom: 3rem;
-}
-}
-
-@media (max-width: 400px) { 
-.memberTitleContainer {
-  flex-direction: column;
-  align-items: center;
-}
-.theFantastic {
-  margin-bottom: .5rem;
-}
-.memberPic {
-  width: 95px;
-}
-.container {
-  margin-left: 3rem;
-}
+@media (max-width: 600px) {
+  .memberTitleContainer {
+    font-size: 20px;
+    padding-bottom: 3rem;
+  }
 }
 
-@media (max-width: 330px) { 
-.theFantastic {
-  font-size: 1.1rem;
+@media (max-width: 478px) {
+  .memberTitleContainer {
+    font-size: 15px;
+    padding-bottom: 3rem;
+  }
 }
-.five {
-  font-size: 1rem;
+
+@media (max-width: 400px) {
+  .memberTitleContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .theFantastic {
+    margin-bottom: 0.5rem;
+  }
+  .memberPic {
+    width: 95px;
+  }
+  .container {
+    margin-left: 3rem;
+  }
 }
+
+@media (max-width: 330px) {
+  .theFantastic {
+    font-size: 1.1rem;
+  }
+  .five {
+    font-size: 1rem;
+  }
 }

@@ -1,0 +1,228 @@
+
+
+.section1 {
+    height: 630px;
+}
+.backgroundImg {
+    background-image: url(../../../assets/competence-bg.png);
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+}
+.navAlign{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5rem;
+    gap: 10px;
+    padding-top: 200px;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 2px;
+}
+.home{
+    color: grey;
+}
+.middle{
+    color: white;
+}
+.frontEnd{
+    color: white;
+}
+
+.home:hover{
+    transform: scale(1.1);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.h1{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 64px;
+    text-transform: capitalize;
+    position: absolute;
+    top: 200px;
+    margin-left: 5rem;
+    margin-top: 4rem;
+
+}
+.h2{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: 100;
+    position: absolute;
+    top: 280px;
+    margin-left: 5rem;
+    margin-top: 4rem;
+}
+
+.section2{
+    height: 580px;
+}
+
+.headAlign{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    margin-left: 5rem;
+}
+
+.head1{
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 2.5px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 100;
+}
+.head2{
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+.box {
+    position: absolute;
+    top: 70px;
+    left: 130px;
+    width: 400px;
+    height: 340px;
+    background-color: #4a99e2;
+  }
+  
+  .boxesAlign {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+  }
+  
+  .firstBox {
+    display: flex;
+    flex-direction: row;
+    margin-top: 110px;
+    padding-left: 50px;
+  }
+  
+  .backEnd {
+    font-size: 16px;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+  }
+  
+  .firstTextAlign {
+    font-size: 16px;
+    width: 70%;
+    line-height: 150%;
+    font-family: "Roboto";
+    font-weight: lighter;
+  }
+  
+  .learn {
+    color: #4a99e2;
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  
+  .icon {
+    color: #4a99e2;
+    margin-top: 22px;
+    font-size: 16px;
+    margin-left: 15px;
+  }
+  
+  .layersAlign {
+    display: flex;
+    flex-direction: row;
+  }
+  .layersIcon {
+    color: #4a99e2;
+    font-size: 40px;
+    margin-right: 20px;
+  }
+  
+  .tvIcon {
+    color: #4a99e2;
+    font-size: 40px;
+    margin-right: 20px;
+  }
+  .brushIcon {
+    color: #4a99e2;
+    font-size: 40px;
+    margin-right: 20px;
+  }
+  .backEndAlign {
+    margin-top: 15px;
+  }
+  .frontAlign {
+    margin-top: 15px;
+  }
+  .digitalAlign {
+    margin-top: 15px;
+  }
+
+  .section3 {
+    height: 1200px;
+  }
+
+  .head2Align{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+.comp1{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5rem;
+    margin-top: 3rem;
+}
+.image {
+    width: 700px;
+    padding-top: 100px;
+    padding-right: 200px;
+    position: relative;
+}
+.imgAlign {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.comp1TextAlign{
+    display: flex;
+    flex-direction: column;
+    margin-top: 140px;
+}
+.text1 {
+    width: 70%;
+    font-size: 16px;
+    line-height: 150%;
+    font-family: "Roboto";
+    font-weight: lighter;
+}
+
+@media only screen and (max-width: 600px) {
+    .section2 {
+        height: 1100px;
+    }
+    .section3 {
+        height: 2000px;
+    }
+    
+    .boxesAlign {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+      }
+
+    .comp1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    
+  }
