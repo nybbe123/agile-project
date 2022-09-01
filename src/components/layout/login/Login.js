@@ -1,9 +1,8 @@
-import React, { useContext } from "react";
-import style from "./Login.module.css";
-import Button from "../../UI/Button";
 import { useFormik } from "formik";
+import React, { useContext } from "react";
 import UserContext from "../../../context/UserContext";
-import { useNavigate } from "react-router-dom";
+import Button from "../../UI/Button";
+import style from "./Login.module.css";
 
 const validate = (values) => {
   const errors = {};
@@ -25,7 +24,6 @@ const validate = (values) => {
 
 const Login = (props) => {
   const ctx = useContext(UserContext);
-  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -42,7 +40,7 @@ const Login = (props) => {
       <div>
         <h2>Welcome to webly</h2>
         <p className={style["form-sub-title"]}>
-          Please enter you email & password
+          Please enter you email & password.
         </p>
       </div>
       <div className={style["form-input-container"]}>

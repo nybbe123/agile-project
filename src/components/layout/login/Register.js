@@ -1,9 +1,8 @@
-import React, { useContext, useState } from "react";
-import style from "./Register.module.css";
-import Button from "../../UI/Button";
-import { useFormik, Form } from "formik";
+import { useFormik } from "formik";
+import React, { useContext } from "react";
 import UserContext from "../../../context/UserContext";
-import { useNavigate } from "react-router-dom";
+import Button from "../../UI/Button";
+import style from "./Register.module.css";
 
 const validate = (values) => {
   const errors = {};
@@ -13,7 +12,7 @@ const validate = (values) => {
   } else if (values.name.length > 15) {
     errors.name = "Must be 15 characters or less";
   } else if (values.name.length < 2) {
-    errors.name = "Must be atleast 2 characters";
+    errors.name = "Must be at least 2 characters";
   }
 
   if (!values.email) {
@@ -25,7 +24,7 @@ const validate = (values) => {
   if (!values.password) {
     errors.password = "Required";
   } else if (values.password.length < 6) {
-    errors.password = "Must be atleast 6 characters";
+    errors.password = "Must be at least 6 characters";
   }
 
   if (values.terms === false) {
@@ -37,7 +36,7 @@ const validate = (values) => {
 
 const Register = (props) => {
   const ctx = useContext(UserContext);
-  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       name: "",
