@@ -9,7 +9,6 @@ import serviceImage from "../../../assets/pexels-christina-morillo-1181263.jpg";
 import style from "./services.module.css";
 import { Link } from "react-router-dom";
 
-
 const Services = () => {
   return (
     <div id="services" className={style["serviceSection"]}>
@@ -51,9 +50,12 @@ const Services = () => {
               application.
             </p>
             <div className={style["iconAlign"]}>
-              <Link style={{textDecoration: 'none'}} to="/backEnd">
-              <span className={style["learn"]}>learn more</span>
-              <FontAwesomeIcon icon={faArrowRight} className={style["icon"]} />
+              <Link style={{ textDecoration: "none" }} to="/backEnd">
+                <span className={style["learn"]}>LEARN MORE</span>
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  className={style["icon"]}
+                />
               </Link>
             </div>
           </div>
@@ -68,9 +70,12 @@ const Services = () => {
               frontend libraries such as React and Svelte since the early days.{" "}
             </p>
             <div className={style["iconAlign"]}>
-              <Link style={{textDecoration: 'none'}} to="/frontEnd">
-              <span className={style["learn"]}>learn more</span>
-              <FontAwesomeIcon icon={faArrowRight} className={style["icon"]} />
+              <Link style={{ textDecoration: "none" }} to="/frontEnd">
+                <span className={style["learn"]}>LEARN MORE</span>
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  className={style["icon"]}
+                />
               </Link>
             </div>
           </div>
@@ -85,9 +90,12 @@ const Services = () => {
               experience and expand potential business.
             </p>
             <div className={style["iconAlign"]}>
-              <Link style={{textDecoration: 'none'}} to="/digitalDesign">
-              <span className={style["learn"]}>learn more</span>
-              <FontAwesomeIcon icon={faArrowRight} className={style["icon"]} />
+              <Link style={{ textDecoration: "none" }} to="/digitalDesign">
+                <span className={style["learn"]}>LEARN MORE</span>
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  className={style["icon"]}
+                />
               </Link>
             </div>
           </div>
