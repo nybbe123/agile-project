@@ -126,7 +126,6 @@
 
 .learn {
   color: #4a99e2;
-  
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -212,21 +211,32 @@
 }
 
 @media only screen and (max-width: 900px) {
+  .imageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   .serviceSection{
     height: 100%;
     margin-bottom: 100px;
-  }
-  
+  } 
   .align{
     display: flex;
     flex-direction: column;
     margin-left: 0;
+    padding-top: 0;
   }
   .imgAlign{
-    position: absolute;
-    top: 630px;
+    position: static;
+    top: 0;
+    margin: 0;
+    margin-top: 3rem;
   }
-
+  .image {
+    width: 350px;
+    margin: 0;
+    padding: 0;
+  }
   .infoStyle{
     max-width: 50%;
     margin-top: 3rem;
@@ -236,7 +246,8 @@
     flex-direction: column;
     text-align: center;
     padding-left: 0;
-    margin-top: 100px;
+    padding-top: 3rem;
+    margin-top: 0;
   }
   .boxesAlign {
     display: flex;
@@ -250,8 +261,6 @@
     text-align: center;
     margin-top: 4rem;
   }
-
-
   .firstTextAlign{
     max-width: 50%;
   }
@@ -269,16 +278,22 @@
     display: flex;
     justify-content: center;
   }
-
+  .box {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 550px) {
   .image {
-    width: 300px;
-    padding-top: 0;
-    padding-right: 0;
-    position: relative;
-    top: 100px;
+    max-width: 300px;
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
+}
 
+@media only screen and (max-width: 384px) {
+  .image {
+    max-width: 220px;
+  }
 }
