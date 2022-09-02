@@ -1,6 +1,18 @@
 .section1 {
   height: 630px;
 }
+
+.h2Design {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 100;
+  position: absolute;
+  top: 280px;
+  margin-left: 5rem;
+  margin-top: 3rem;
+}
+
 .backgroundImg {
   background-image: url(../../../assets/competence-bg.png);
   background-size: cover;
