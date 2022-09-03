@@ -1,6 +1,7 @@
 .serviceSection {
   background-color: #ffffff;
-  height: 1000px;
+  height: 100%;
+  margin-bottom: 100px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -115,10 +116,17 @@
   font-family: "Roboto";
   font-weight: lighter;
 }
+.thirdTextAlign {
+  font-size: 16px;
+  width: 75%;
+  line-height: 150%;
+  font-family: "Roboto";
+  font-weight: lighter;
+}
 
 .learn {
   color: #4a99e2;
-  margin-top: 20px;
+  
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -167,4 +175,110 @@
 }
 .digitalAlign {
   margin-top: 15px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .box {
+    width: 240px;
+    height: 200px;
+    top: 80px;
+    left: 85px;
+  }
+  .image {
+    width: 500px;
+  }
+  .imgAlign{
+    margin-top: 50px;
+  }
+
+}
+@media only screen and (max-width: 1200px) {
+  .imgAlign{
+    margin-left: 50px;
+  }
+  .whtStyle{
+    font-size: 30px;
+  }
+  .expStyle{
+    font-size: 30px;
+    margin-left: -1px;
+  }
+  .text2Align{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+  .serviceSection{
+    height: 100%;
+    margin-bottom: 100px;
+  }
+  
+  .align{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .imgAlign{
+    position: absolute;
+    top: 630px;
+  }
+
+  .infoStyle{
+    max-width: 50%;
+    margin-top: 3rem;
+  }
+  .textAlign{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 100px;
+  }
+  .boxesAlign {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .firstBox{
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+
+  .firstTextAlign{
+    max-width: 50%;
+  }
+  .firstText2Align{
+    display: flex;
+    justify-content: center;
+  }
+  .secondTextAlign{
+    max-width: 50%;
+  }
+  .thirdTextAlign{
+    max-width: 50%;
+  }
+  .infoAlign{
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+  .image {
+    width: 300px;
+    padding-top: 0;
+    padding-right: 0;
+    position: relative;
+    top: 100px;
+  }
+
 }
