@@ -1,6 +1,18 @@
 .section1 {
   height: 630px;
 }
+
+.h2Design {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 100;
+  position: absolute;
+  top: 280px;
+  margin-left: 5rem;
+  margin-top: 3rem;
+}
+
 .backgroundImg {
   background-image: url(../../../assets/competence-bg.png);
   background-size: cover;
@@ -220,6 +232,102 @@
   .comp1 {
     display: flex;
     flex-direction: column;
-    margin-left: 0;
+    margin-left: 0rem;
+  }
+
+  .h1 {
+    font-size: 55px;
+  }
+
+  .h2 {
+    margin-top: 7rem;
+  }
+
+  .comp1TextAlign {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .h1 {
+    font-size: 45px;
+    margin-top: 1rem;
+  }
+
+  .h2 {
+    font-size: 25px;
+    margin-top: 3rem;
+  }
+
+  .firstTextAlign {
+    font-size: 15px;
+  }
+}
+@media (max-width: 450px) {
+  .h1 {
+    font-size: 35px;
+    margin-top: 1rem;
+  }
+
+  .h2 {
+    font-size: 22px;
+    margin-top: 1.5rem;
+  }
+
+  .firstTextAlign {
+    font-size: 13px;
+  }
+
+  .home {
+    font-size: 13px;
+  }
+
+  .middle {
+    font-size: 13px;
+  }
+
+  .frontEnd {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 380px) {
+  .h1 {
+    font-size: 27px;
+    margin-top: 1rem;
+  }
+
+  .h2 {
+    font-size: 15px;
+    margin-top: 1rem;
+  }
+
+  .firstTextAlign {
+    font-size: 13px;
+  }
+
+  .home {
+    font-size: 13px;
+  }
+
+  .middle {
+    font-size: 13px;
+  }
+
+  .frontEnd {
+    font-size: 13px;
+  }
+
+  .head1 {
+    font-size: 15px;
+  }
+
+  .head2 {
+    font-size: 25px;
+  }
+
+  .head2Align {
+    margin-top: 3rem;
   }
 }
