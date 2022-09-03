@@ -72,6 +72,12 @@
   cursor: pointer;
 }
 
+.learnmore:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  transition: 0.5s;
+}
+
 .learnmore > p {
   font-family: "Alegreya Sans SC", sans-serif;
   text-decoration: none;
@@ -116,43 +122,27 @@
 }
 
 @media (max-width: 400px) {
-  .memberTitleContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-  .theFantastic {
-    margin-bottom: 0.5rem;
-  }
-  .memberPic {
-    width: 95px;
-  }
   .container {
-    margin-left: 0;
+    margin: auto;
   }
 
-  .memberText {
-    font-size: 0.8rem;
-  }
-
-  .memberInfo {
-    width: 300px;
-  }
-}
-
-@media (max-width: 350px) {
-  .theFantastic {
-    font-size: 1.1rem;
-  }
-  .five {
-    font-size: 1rem;
-  }
   .memberPic {
     width: 140px;
   }
+
   .memberInfo {
     display: flex;
     flex-direction: column;
     place-items: center;
     gap: 1rem;
+    text-align: center;
+  }
+
+  .memberText {
+    gap: 0.3rem;
+  }
+
+  .memberName {
+    font-size: 1rem;
   }
 }
