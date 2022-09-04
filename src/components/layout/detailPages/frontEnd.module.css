@@ -1,5 +1,5 @@
 .section1 {
-  height: 630px;
+  height: 100%;
 }
 
 .h2Design {
@@ -19,6 +19,7 @@
   background-position: center;
   height: 650px;
 }
+
 .navAlign {
   display: flex;
   flex-direction: row;
@@ -66,7 +67,7 @@
 }
 
 .section2 {
-  height: 580px;
+  height: 100%;
 }
 
 .headAlign {
@@ -74,6 +75,9 @@
   flex-direction: column;
   padding-top: 100px;
   margin-left: 5rem;
+}
+.head2Align {
+  margin-top: 6rem;
 }
 
 .head1 {
@@ -176,7 +180,8 @@
 }
 
 .section3 {
-  height: 1200px;
+  height: 100%;
+  margin-bottom: 100px;
 }
 
 .head2Align {
@@ -192,6 +197,12 @@
   margin-top: 3rem;
 }
 .image {
+  width: 700px;
+  padding-top: 100px;
+  padding-right: 200px;
+  position: relative;
+}
+.image1 {
   width: 700px;
   padding-top: 100px;
   padding-right: 200px;
@@ -215,7 +226,97 @@
   font-weight: lighter;
 }
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 976px) {
+  .boxesAlign{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    margin-bottom: 5rem;
+  }
+  .box{
+    display: none;
+  }
+  .comp1{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .imgAlign{
+    position: static;
+    top: 0;
+    margin: 0;
+    margin-top: 3rem;
+  }
+  .image {
+    width: 350px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  .image1 {
+    display: none;
+  }
+  .h2{
+    margin-top: 10rem;
+  }
+  .h1{
+    font-size: 50px;
+  }
+  .imageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .alignment{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .headAlign{
+    text-align: center;
+    margin-left: 0;
+  }
+  .head2{
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .firstBox{
+    display: flex;
+    flex-direction: column;
+  }
+  .backEnd{
+    text-align: center;
+  }
+  .firstTextAlign{
+    text-align: center;
+    max-width: 40%;
+  }
+  .firstBox{
+    margin-top: 5rem;
+  }
+  .brushIcon{
+    margin-right: 0;
+  }
+  .tvIcon{
+    margin-right: 0;
+  }
+  .layersIcon{
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .h1{
+    font-size: 30px;
+  }
+}
+
+
+/* @media only screen and (max-width: 600px) {
   .section2 {
     height: 1100px;
   }
@@ -330,4 +431,4 @@
   .head2Align {
     margin-top: 3rem;
   }
-}
+} */

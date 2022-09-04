@@ -1,7 +1,5 @@
 import {
   faDisplay,
-  faLayerGroup,
-  faPaintBrush,
   faCode,
   faLaptopCode,
 } from "@fortawesome/free-solid-svg-icons";
@@ -37,23 +35,26 @@ const FrontEndPage = () => {
             <FontAwesomeIcon icon={faCode} className={style["layersIcon"]} />
             <div className={style["backEndAlign"]}>
               <h1 className={style["backEnd"]}>HTML</h1>
-
+              <div className={style["alignment"]}>
               <p className={style["firstTextAlign"]}>
                 We use HTML to build the static visual parts of your website.
                 HTML is a very popular technology and is used for about 94% of
                 all websites.
               </p>
             </div>
+            </div>
           </div>
           <div className={style["firstBox"]}>
             <FontAwesomeIcon icon={faDisplay} className={style["tvIcon"]} />
             <div className={style["frontAlign"]}>
               <h1 className={style["backEnd"]}>CSS</h1>
+              <div className={style["alignment"]}>
               <p className={style["firstTextAlign"]}>
                 We use CSS to style your website with colors, fonts and
                 animations. We also make sure to use CSS to make the website
                 responsive for desktop, tablet and mobile devices.
               </p>
+            </div>
             </div>
           </div>
           <div className={style["firstBox"]}>
@@ -63,11 +64,13 @@ const FrontEndPage = () => {
             />
             <div className={style["digitalAlign"]}>
               <h1 className={style["backEnd"]}>JAVASCRIPT</h1>
+              <div className={style["alignment"]}>
               <p className={style["firstTextAlign"]}>
                 We use Javascript to make your website coma alive. It is what we
                 use to add functionality to the website. Examples are clickable
                 menu, contact form or a map.
               </p>
+            </div>
             </div>
           </div>
         </div>
@@ -79,23 +82,28 @@ const FrontEndPage = () => {
           <p className={style["head2"]}>our customers</p>
         </div>
         <div className={style["comp1"]}>
+        <div className={style["imageContainer"]}>
           <div className={style["imgAlign"]}>
             <div className={style["box"]}></div>
             <img className={style["image"]} src={serviceImage}></img>
           </div>
+          </div>
 
           <div className={style["comp1TextAlign"]}>
             <p className={style["head2"]}>GAMEX</p>
+            <div className={style["alignment"]}>
             <p className={style["text1"]}>
               Webly created a browser game for the company GAMEX using the P5
               library, HTML and CSS and Typescript. We have a lot of experience
               using Javascript or Typescript in our projects.
             </p>
           </div>
+          </div>
         </div>
         <div className={style["comp1"]}>
           <div className={style["comp1TextAlign"]}>
             <p className={style["head2"]}>RIDDLE</p>
+            <div className={style["alignment"]}>
             <p className={style["text1"]}>
               Webly made a calendar and todo application for the company Riddle.
               Using Javascript technologies the calendar is fully functional,
@@ -105,10 +113,12 @@ const FrontEndPage = () => {
               todos the user has during a single day.
             </p>
           </div>
-
+          </div>
+          <div className={style["imageContainer"]}>
           <div className={style["imgAlign"]}>
             <div className={style["box"]}></div>
-            <img className={style["image"]} src={serviceImage}></img>
+            <img className={style["image1"]} src={serviceImage}></img>
+          </div>
           </div>
         </div>
       </div>
