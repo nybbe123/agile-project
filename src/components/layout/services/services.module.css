@@ -127,6 +127,8 @@
 
 .learn {
   color: #4a99e2;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 600;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -187,28 +189,26 @@
   .image {
     width: 500px;
   }
-  .imgAlign{
+  .imgAlign {
     margin-top: 50px;
   }
-
 }
 @media only screen and (max-width: 1200px) {
-  .imgAlign{
+  .imgAlign {
     margin-left: 50px;
   }
-  .whtStyle{
+  .whtStyle {
     font-size: 30px;
   }
-  .expStyle{
+  .expStyle {
     font-size: 30px;
     margin-left: -1px;
   }
-  .text2Align{
+  .text2Align {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
   }
-
 }
 
 @media only screen and (max-width: 900px) {
@@ -242,7 +242,7 @@
     max-width: 50%;
     margin-top: 3rem;
   }
-  .textAlign{
+  .textAlign {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -255,7 +255,7 @@
     flex-direction: column;
     margin-left: 0;
   }
-  .firstBox{
+  .firstBox {
     padding-left: 0;
     display: flex;
     flex-direction: column;
@@ -265,17 +265,17 @@
   .firstTextAlign{
     max-width: 50%;
   }
-  .firstText2Align{
+  .firstText2Align {
     display: flex;
     justify-content: center;
   }
-  .secondTextAlign{
+  .secondTextAlign {
     max-width: 50%;
   }
-  .thirdTextAlign{
+  .thirdTextAlign {
     max-width: 50%;
   }
-  .infoAlign{
+  .infoAlign {
     display: flex;
     justify-content: center;
   }

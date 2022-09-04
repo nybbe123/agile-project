@@ -72,6 +72,12 @@
   cursor: pointer;
 }
 
+.learnmore:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  transition: 0.5s;
+}
+
 .learnmore > p {
   font-family: "Alegreya Sans SC", sans-serif;
   text-decoration: none;
@@ -103,6 +109,9 @@
     font-size: 20px;
     padding-bottom: 3rem;
   }
+  .memberText {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 478px) {
@@ -113,26 +122,27 @@
 }
 
 @media (max-width: 400px) {
-  .memberTitleContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-  .theFantastic {
-    margin-bottom: 0.5rem;
-  }
-  .memberPic {
-    width: 95px;
-  }
   .container {
-    margin-left: 3rem;
+    margin: auto;
   }
-}
 
-@media (max-width: 330px) {
-  .theFantastic {
-    font-size: 1.1rem;
+  .memberPic {
+    width: 140px;
   }
-  .five {
+
+  .memberInfo {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .memberText {
+    gap: 0.3rem;
+  }
+
+  .memberName {
     font-size: 1rem;
   }
 }

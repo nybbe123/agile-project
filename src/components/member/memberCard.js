@@ -13,8 +13,9 @@ function MemberCard() {
     <div id="about-us" className={style["container"]}>
       <p className={style["p"]}>ABOUT US</p>
       <div className={style["memberTitleContainer"]}>
-        <h2 className={style["theFantastic"]}>THE FANTASTIC</h2>
-        <h2 className={style["five"]}> FIVE</h2>
+        <h2 className={style["theFantastic"]}>
+          THE FANTASTIC <span className={style["five"]}>FIVE</span>
+        </h2>
       </div>
       <div className={style["memberContainer"]}>
         {memberData.map((member) => (
@@ -23,7 +24,7 @@ function MemberCard() {
               className={style["memberPic"]}
               src={member.namePic}
               alt={member.name}
-            ></img>
+            />
             <div className={style["memberText"]}>
               <p className={style["memberName"]}>{member.name}</p>
               <p>{member.title}</p>
