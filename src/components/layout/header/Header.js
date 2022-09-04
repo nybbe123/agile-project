@@ -1,51 +1,37 @@
-import { useContext } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import UserContext from "../../../context/UserContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faXmark,
-  faHandshakeAngle,
-  faCircleInfo,
   faAddressBook,
+  faCircleInfo,
+  faHandshakeAngle,
   faUser,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
-import style from "./Header.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Link as Scroll, scroller } from "react-scroll";
 import burgerMenu from "../../../assets/burger-menu.png";
 import LinkContext from "../../../context/LinkContext";
+import UserContext from "../../../context/UserContext";
+import style from "./Header.module.css";
 
 const Header = () => {
   const userCtx = useContext(UserContext);
   const linkCtx = useContext(LinkContext);
   const navigate = useNavigate();
+  const [openMenu, setOpenMenu] = useState(false);
+  const [showHamMenu, setShowHamMenu] = useState();
 
-  const checkMenu = () => {
-    if (window.innerWidth > 930) {
-      const menu = document.getElementById("hamMenu");
-      menu.style.display = "none";
-    } else if (window.innerWidth < 930) {
-      const menu = document.getElementById("hamMenu");
-      menu.style.display = "block";
-    }
-  };
+  useEffect(() => {
+    window.innerWidth < 930 ? setShowHamMenu(true) : setShowHamMenu(false);
+    const handleWindowResize = () => {
+      window.innerWidth < 930 ? setShowHamMenu(true) : setShowHamMenu(false);
+    };
 
-  window.addEventListener("resize", checkMenu);
-
-  const menuToggle = () => {
-    const menu = document.getElementById("openedMenu");
-    const hamMenu = document.getElementById("hamMenu");
-    const close = document.getElementById("closeMenu");
-    if (menu.style.display !== "flex") {
-      menu.style.display = "flex";
-      menu.classList.add(style["openMenuStyle"]);
-      hamMenu.style.display = "none";
-      close.style.display = "flex";
-    } else {
-      menu.style.display = "none";
-      close.style.display = "none";
-      hamMenu.style.display = "flex";
-    }
-  };
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   const scrollTarget = (target) => {
     scroller.scrollTo(target, { smooth: true, duration: 500 });
@@ -57,6 +43,12 @@ const Header = () => {
     scrollTarget(target);
   };
 
+  const menuItems = [
+    { title: "services", icon: faHandshakeAngle },
+    { title: "about-us", icon: faCircleInfo },
+    { title: "contact", icon: faAddressBook },
+  ];
+
   return (
     <header className={style.header}>
       <div className={style.headerLeft}>
@@ -64,181 +56,122 @@ const Header = () => {
           WEBLY
         </Link>
       </div>
+
+      {/* header in desktop */}
       <nav className={style.headerRight}>
         <ul className={style.navLinks}>
-          <li className={[style.navItems, style.navMarginRight].join(" ")}>
-            {linkCtx.isDetail === false ? (
-              <Scroll
-                to="services"
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
-              >
-                SERVICES
-              </Scroll>
-            ) : (
-              <div
-                onClick={() => {
-                  scrollToPage("services");
-                }}
-              >
-                SERVICES
-              </div>
-            )}
-          </li>
-          <li className={[style.navItems, style.navMarginRight].join(" ")}>
-            {linkCtx.isDetail === false ? (
-              <Scroll
-                to="aboutUs"
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
-              >
-                ABOUT US
-              </Scroll>
-            ) : (
-              <div
-                onClick={() => {
-                  scrollToPage("aboutUs");
-                }}
-              >
-                ABOUT US
-              </div>
-            )}
-          </li>
-          <li className={[style.navItems, style.navMarginRight].join(" ")}>
-            {linkCtx.isDetail === false ? (
-              <Scroll
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
-              >
-                CONTACT
-              </Scroll>
-            ) : (
-              <div
-                onClick={() => {
-                  scrollToPage("contact");
-                }}
-              >
-                CONTACT
-              </div>
-            )}
-          </li>
-          {userCtx.isLoggedIn ? (
+          {menuItems.map((item, index) => (
             <li
-              className={[style.loginOutBtn]}
-              onClick={() => {
-                userCtx.onLogout();
-              }}
+              key={index}
+              className={[style.navItems, style.navMarginRight].join(" ")}
             >
-              LOGOUT
+              {linkCtx.isDetail === false ? (
+                <Scroll
+                  to={item.title}
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                >
+                  {item.title.replace("-", " ")}
+                </Scroll>
+              ) : (
+                <div onClick={() => scrollToPage(item.title)}>
+                  {item.title.replace("-", " ")}
+                </div>
+              )}
             </li>
-          ) : (
-            <li
-              className={[style.loginOutBtn]}
-              onClick={() => {
-                navigate("/login");
-              }}
-            >
-              LOGIN
-            </li>
-          )}
+          ))}
+
+          <li
+            className={[style.loginOutBtn]}
+            onClick={() =>
+              userCtx.isLoggedIn ? userCtx.onLogout() : navigate("/login")
+            }
+          >
+            {userCtx.isLoggedIn ? "LOGOUT" : "LOGIN"}
+          </li>
         </ul>
       </nav>
-      <div id="openedMenu" className={[style.openedMenuClass]}>
+
+      {/* below is the hamburger menu */}
+      <div
+        style={{ display: openMenu ? "flex" : "none" }}
+        className={openMenu ? [style.openMenuStyle] : null}
+      >
         <ul>
-          <li>
-            <FontAwesomeIcon
-              icon={faHandshakeAngle}
-              style={{ fontSize: "1.5rem" }}
-            />
-            <Scroll
-              to="services"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-            >
-              SERVICES
-            </Scroll>
-          </li>
-          <li>
-            <FontAwesomeIcon
-              style={{ fontSize: "1.5rem" }}
-              icon={faCircleInfo}
-            />
-            <Scroll
-              to="aboutUs"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-            >
-              ABOUT US
-            </Scroll>
-          </li>
-          <li>
-            <FontAwesomeIcon
-              style={{ fontSize: "1.5rem" }}
-              icon={faAddressBook}
-            />
-            <Scroll
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-            >
-              CONTACT
-            </Scroll>
-          </li>
-          {userCtx.isLoggedIn ? (
-            <li
-              className={[style.loginOutBtn]}
-              onClick={() => {
-                userCtx.onLogout();
-              }}
-            >
-              <FontAwesomeIcon style={{ fontSize: "1.5rem" }} icon={faUser} />
-              LOGOUT
-            </li>
-          ) : (
-            <li
-              className={[style]}
-              onClick={() => {
-                navigate("/login");
-              }}
-            >
-              <FontAwesomeIcon style={{ fontSize: "1.5rem" }} icon={faUser} />
-              LOGIN
-            </li>
+          {menuItems.map((item, index) =>
+            linkCtx.isDetail === false ? (
+              <Scroll
+                to={item.title}
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                className={style.scrollLink}
+                onClick={() => setOpenMenu(false)}
+                key={index}
+              >
+                <FontAwesomeIcon
+                  icon={item.icon}
+                  style={{ fontSize: "1.5rem" }}
+                />
+                <li>{item.title.replace("-", " ")}</li>
+              </Scroll>
+            ) : (
+              <div
+                className={style.scrollLink}
+                onClick={() => {
+                  setOpenMenu(false);
+                  scrollToPage(item.title);
+                }}
+                key={index}
+              >
+                <FontAwesomeIcon
+                  icon={item.icon}
+                  style={{ fontSize: "1.5rem" }}
+                />
+                {item.title.replace("-", " ")}
+              </div>
+            )
           )}
+
+          <li
+            className={[style.loginOutBtn]}
+            style={{ marginLeft: 0 }}
+            onClick={() => {
+              setOpenMenu(false);
+              userCtx.isLoggedIn ? userCtx.onLogout() : navigate("/login");
+            }}
+          >
+            <FontAwesomeIcon
+              style={{ fontSize: "1.5rem", marginRight: "1rem" }}
+              icon={faUser}
+            />
+            {userCtx.isLoggedIn ? "LOGOUT" : "LOGIN"}
+          </li>
         </ul>
       </div>
-      <img
-        onClick={menuToggle}
-        src={burgerMenu}
-        alt="burgerMenu"
-        className={style.burgerMenu}
-        id="hamMenu"
-      />
-      <FontAwesomeIcon
-        onClick={menuToggle}
-        id="closeMenu"
-        icon={faXmark}
-        style={{
-          display: "none",
-          fontSize: "1.7rem",
-          marginTop: ".8rem",
-          marginRight: "1.7rem",
-          zIndex: "1",
-        }}
-      />
+
+      {!showHamMenu ? null : !openMenu ? (
+        <img
+          onClick={() => setOpenMenu(true)}
+          src={burgerMenu}
+          alt="open menu"
+          className={style.burgerMenu}
+        />
+      ) : (
+        <FontAwesomeIcon
+          onClick={() => setOpenMenu(false)}
+          icon={faXmark}
+          style={{
+            fontSize: "1.7rem",
+            marginTop: ".8rem",
+            marginRight: "1.7rem",
+            zIndex: "1",
+          }}
+        />
+      )}
     </header>
   );
 };

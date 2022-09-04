@@ -22,7 +22,7 @@ const DesignPage = () => {
             <p className={style["frontEnd"]}>DIGITAL DESIGN</p>
           </div>
           <h1 className={style["h1"]}>DIGITAL DESIGN</h1>
-          <h2 className={style["h2"]}>Let us design your application</h2>
+          <h2 className={style["h2Design"]}>Let us design your application</h2>
         </div>
       </div>
       <div className={style["section2"]}>

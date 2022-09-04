@@ -10,7 +10,7 @@ function MemberCard() {
   const linkCtx = useContext(LinkContext);
   const navigate = useNavigate();
   return (
-    <div id="aboutUs" className={style["container"]}>
+    <div id="about-us" className={style["container"]}>
       <p className={style["p"]}>ABOUT US</p>
       <div className={style["memberTitleContainer"]}>
         <h2 className={style["theFantastic"]}>
