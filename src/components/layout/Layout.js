@@ -3,7 +3,6 @@ import Footer from "./footer/Footer";
 import Header from "./header/Header";
 
 const Layout = () => {
-  window.scrollTo(0, 0);
   return (
     <div>
       <Header />
