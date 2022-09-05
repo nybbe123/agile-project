@@ -27,16 +27,26 @@
   gap: 10px;
   padding-top: 200px;
   font-family: "Montserrat", sans-serif;
-  letter-spacing: 2px;
+  font-weight: 200;
+  font-size: 12px;
+  letter-spacing: 1.5px;
 }
+
 .home {
   color: grey;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 12px;
+  letter-spacing: 1.5px;
 }
-.middle {
-  color: white;
-}
+
+.middle,
 .frontEnd {
   color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 12px;
+  letter-spacing: 1.5px;
 }
 
 .home:hover {
@@ -226,28 +236,31 @@
   font-weight: lighter;
 }
 
-
 @media only screen and (max-width: 1020px) {
-  .h1{
+  .h1 {
     font-size: 50px;
+  }
+
+  .h2 {
+    font-size: 28px;
   }
 }
 @media only screen and (max-width: 976px) {
-  .boxesAlign{
+  .boxesAlign {
     display: flex;
     flex-direction: column;
     margin-left: 0;
     margin-bottom: 5rem;
   }
-  .box{
+  .box {
     display: none;
   }
-  .comp1{
+  .comp1 {
     display: flex;
     flex-direction: column;
     margin: 0;
   }
-  .imgAlign{
+  .imgAlign {
     position: static;
     top: 0;
     margin: 0;
@@ -265,10 +278,10 @@
   .image1 {
     display: none;
   }
-  .h2{
-    margin-top: 10rem;
+  .h2 {
+    margin-top: 7rem;
   }
-  .h1{
+  .h1 {
     font-size: 50px;
   }
   .imageContainer {
@@ -276,50 +289,66 @@
     display: flex;
     justify-content: center;
   }
-  .alignment{
+  .alignment {
     display: flex;
     justify-content: center;
     text-align: center;
   }
-  .headAlign{
+  .headAlign {
     text-align: center;
     margin-left: 0;
   }
-  .head2{
+  .head2 {
     text-align: center;
     margin-bottom: 1rem;
   }
-  .firstBox{
+  .firstBox {
     display: flex;
     flex-direction: column;
   }
-  .backEnd{
+  .backEnd {
     text-align: center;
   }
-  .firstTextAlign{
+  .firstTextAlign {
     text-align: center;
     max-width: 40%;
+    min-width: 350px;
   }
-  .firstBox{
+  .firstBox {
     margin-top: 5rem;
   }
-  .brushIcon{
+  .brushIcon {
     margin-right: 0;
   }
-  .tvIcon{
+  .tvIcon {
     margin-right: 0;
   }
-  .layersIcon{
+  .layersIcon {
     margin-right: 0;
   }
 }
 
 @media only screen and (max-width: 485px) {
-  .h1{
+  .h1 {
     font-size: 30px;
   }
+  .firstTextAlign {
+    max-width: 100%;
+    min-width: 280px;
+  }
+  .navAlign {
+    margin-left: 2rem;
+  }
+  .h1 {
+    margin-left: 2rem;
+  }
+  .h2,
+  .h2Design {
+    margin-left: 2rem;
+    margin-top: 4rem;
+    font-size: 22px;
+  }
 }
-
 
 /* @media only screen and (max-width: 600px) {
   .section2 {
