@@ -36,12 +36,12 @@ const FrontEndPage = () => {
             <div className={style["backEndAlign"]}>
               <h1 className={style["backEnd"]}>HTML</h1>
               <div className={style["alignment"]}>
-              <p className={style["firstTextAlign"]}>
-                We use HTML to build the static visual parts of your website.
-                HTML is a very popular technology and is used for about 94% of
-                all websites.
-              </p>
-            </div>
+                <p className={style["firstTextAlign"]}>
+                  We use HTML to build the static visual parts of your website.
+                  HTML is a very popular technology and is used for about 94% of
+                  all websites.
+                </p>
+              </div>
             </div>
           </div>
           <div className={style["firstBox"]}>
@@ -49,12 +49,12 @@ const FrontEndPage = () => {
             <div className={style["frontAlign"]}>
               <h1 className={style["backEnd"]}>CSS</h1>
               <div className={style["alignment"]}>
-              <p className={style["firstTextAlign"]}>
-                We use CSS to style your website with colors, fonts and
-                animations. We also make sure to use CSS to make the website
-                responsive for desktop, tablet and mobile devices.
-              </p>
-            </div>
+                <p className={style["firstTextAlign"]}>
+                  We use CSS to style your website with colors, fonts and
+                  animations. We also make sure to use CSS to make the website
+                  responsive for desktop, tablet and mobile devices.
+                </p>
+              </div>
             </div>
           </div>
           <div className={style["firstBox"]}>
@@ -65,12 +65,12 @@ const FrontEndPage = () => {
             <div className={style["digitalAlign"]}>
               <h1 className={style["backEnd"]}>JAVASCRIPT</h1>
               <div className={style["alignment"]}>
-              <p className={style["firstTextAlign"]}>
-                We use Javascript to make your website coma alive. It is what we
-                use to add functionality to the website. Examples are clickable
-                menu, contact form or a map.
-              </p>
-            </div>
+                <p className={style["firstTextAlign"]}>
+                  We use Javascript to make your website coma alive. It is what
+                  we use to add functionality to the website. Examples are
+                  clickable menu, contact form or a map.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -82,43 +82,51 @@ const FrontEndPage = () => {
           <p className={style["head2"]}>our customers</p>
         </div>
         <div className={style["comp1"]}>
-        <div className={style["imageContainer"]}>
-          <div className={style["imgAlign"]}>
-            <div className={style["box"]}></div>
-            <img className={style["image"]} src={serviceImage}></img>
-          </div>
+          <div className={style["imageContainer"]}>
+            <div className={style["imgAlign"]}>
+              <div className={style["box"]}></div>
+              <img
+                className={style["image"]}
+                src={serviceImage}
+                alt="img"
+              ></img>
+            </div>
           </div>
 
           <div className={style["comp1TextAlign"]}>
             <p className={style["head2"]}>GAMEX</p>
             <div className={style["alignment"]}>
-            <p className={style["text1"]}>
-              Webly created a browser game for the company GAMEX using the P5
-              library, HTML and CSS and Typescript. We have a lot of experience
-              using Javascript or Typescript in our projects.
-            </p>
-          </div>
+              <p className={style["text1"]}>
+                Webly created a browser game for the company GAMEX using the P5
+                library, HTML and CSS and Typescript. We have a lot of
+                experience using Javascript or Typescript in our projects.
+              </p>
+            </div>
           </div>
         </div>
         <div className={style["comp1"]}>
           <div className={style["comp1TextAlign"]}>
             <p className={style["head2"]}>RIDDLE</p>
             <div className={style["alignment"]}>
-            <p className={style["text1"]}>
-              Webly made a calendar and todo application for the company Riddle.
-              Using Javascript technologies the calendar is fully functional,
-              with day, month, year and time. The todo list is easy to use and
-              the user can create a todo for a specific day and mark it as
-              accomplished when done. The calendar is also showing how many
-              todos the user has during a single day.
-            </p>
-          </div>
+              <p className={style["text1"]}>
+                Webly made a calendar and todo application for the company
+                Riddle. Using Javascript technologies the calendar is fully
+                functional, with day, month, year and time. The todo list is
+                easy to use and the user can create a todo for a specific day
+                and mark it as accomplished when done. The calendar is also
+                showing how many todos the user has during a single day.
+              </p>
+            </div>
           </div>
           <div className={style["imageContainer"]}>
-          <div className={style["imgAlign"]}>
-            <div className={style["box"]}></div>
-            <img className={style["image1"]} src={serviceImage}></img>
-          </div>
+            <div className={style["imgAlign"]}>
+              <div className={style["box"]}></div>
+              <img
+                className={style["image1"]}
+                src={serviceImage}
+                alt="img"
+              ></img>
+            </div>
           </div>
         </div>
       </div>

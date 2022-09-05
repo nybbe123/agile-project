@@ -21,7 +21,7 @@ const Services = () => {
         <div className={style["imageContainer"]}>
           <div className={style["imgAlign"]}>
             <div className={style["box"]}></div>
-            <img className={style["image"]} src={serviceImage}></img>
+            <img className={style["image"]} src={serviceImage} alt="img"></img>
           </div>
         </div>
         <div className={style["textAlign"]}>
