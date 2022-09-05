@@ -1,4 +1,5 @@
 import emailjs from "@emailjs/browser";
+import MarkEmailReadIcon from "@mui/icons-material/MarkEmailRead";
 import { useFormik } from "formik";
 import { useEffect, useState } from "react";
 import { memberData } from "../../../member/memberData";
@@ -8,6 +9,7 @@ import { validationSchema } from "./ContactFormValidationSchema";
 const ContactForm = () => {
   const [fontColor, setFontColor] = useState("grey");
   const [sending, setSending] = useState("Send Message");
+  const [sent, setSent] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -51,8 +53,9 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
-          setSending("Message sent!");
+          setSent(true);
           resetForm();
+          setTimeout(() => setSent(false), 2000);
         },
         (error) => {
           console.log(error);
@@ -60,7 +63,15 @@ const ContactForm = () => {
       );
   };
 
-  return (
+  return sent ? (
+    <div className={style["message-sent"]}>
+      <MarkEmailReadIcon className={style["sent-icon"]} fontSize="large" />
+      <h2>
+        Thank you <br /> for contacting us!
+      </h2>
+      <h4>We will reply you as soon as we can.</h4>
+    </div>
+  ) : (
     <form onSubmit={formik.handleSubmit} id={style.root}>
       <label htmlFor="name">
         First & Last Name *
@@ -125,7 +136,6 @@ const ContactForm = () => {
           id="teammbr"
           type="teammbr"
           name="teammbr"
-          // placeholder="Select a person to contact"
           value={formik.values.teammbr}
           onChange={formik.handleChange}
           className={style[fontColor]}
