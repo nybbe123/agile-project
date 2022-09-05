@@ -11,7 +11,7 @@ const Team = () => {
           <Link to="/">HOME</Link> / TEAM
         </p>
         <h1>THE WEBLY TEAM</h1>
-        <h2>Lorem Ipsum Dolor Sit</h2>
+        <h2>The Fantastic Five</h2>
       </div>
 
       <div id={style.team}>

@@ -47,6 +47,7 @@
   font-weight: lighter;
   font-family: "Roboto";
   line-height: 150%;
+  min-width: 270px;
 }
 
 .image {
@@ -217,17 +218,17 @@
     display: flex;
     justify-content: center;
   }
-  .serviceSection{
+  .serviceSection {
     height: 100%;
     margin-bottom: 100px;
-  } 
-  .align{
+  }
+  .align {
     display: flex;
     flex-direction: column;
     margin-left: 0;
     padding-top: 0;
   }
-  .imgAlign{
+  .imgAlign {
     position: static;
     top: 0;
     margin: 0;
@@ -238,7 +239,7 @@
     margin: 0;
     padding: 0;
   }
-  .infoStyle{
+  .infoStyle {
     max-width: 50%;
     margin-top: 3rem;
   }
@@ -262,18 +263,15 @@
     text-align: center;
     margin-top: 4rem;
   }
-  .firstTextAlign{
+  .firstTextAlign,
+  .secondTextAlign,
+  .thirdTextAlign {
     max-width: 50%;
+    min-width: 270px;
   }
   .firstText2Align {
     display: flex;
     justify-content: center;
-  }
-  .secondTextAlign {
-    max-width: 50%;
-  }
-  .thirdTextAlign {
-    max-width: 50%;
   }
   .infoAlign {
     display: flex;
