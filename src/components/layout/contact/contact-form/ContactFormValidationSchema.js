@@ -22,7 +22,7 @@ export const validationSchema = yup.object().shape({
     .test(
       "empty-check",
       "Required",
-      (teammbr) => !teammbr || teammbr !== "default"
+      (val) => val && val !== "default" && val !== ""
     ),
   message: yup
     .string()

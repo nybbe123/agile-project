@@ -1,14 +1,13 @@
+import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { memberData } from "../../../member/memberData";
 import style from "./ContactForm.module.css";
 import { validationSchema } from "./ContactFormValidationSchema";
-import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const [fontColor, setFontColor] = useState("grey");
   const [sending, setSending] = useState("Send Message");
-  // const [toEmail, setToEmail] = useState("");
 
   const formik = useFormik({
     initialValues: {
@@ -29,20 +28,20 @@ const ContactForm = () => {
     formik.values.teammbr !== "default"
       ? setFontColor("dark")
       : setFontColor("grey");
+  }, [formik.values.teammbr]);
 
+  useEffect(() => {
     if (formik.values.teammbr) {
       const findMember = memberData.find(
         (member) => member.name === formik.values.teammbr
       );
+      if (!findMember) return;
       formik.values.to_email = findMember.email;
     }
-  }, [formik.values.teammbr]);
+  }, [formik.values]);
 
-  // not sure if we wanna reset the form when the user clicks submit so I leave it for now
   const handleSubmit = async (values, resetForm) => {
     setSending("Sending...");
-    console.log(values);
-
     emailjs
       .send(
         process.env.REACT_APP_SERVICE_ID,
@@ -50,7 +49,6 @@ const ContactForm = () => {
         values,
         process.env.REACT_APP_PUBLIC_KEY
       )
-      // .send("service_b9z5tiu", "template_pxbyowe", values, "4oNZgIst6GSONkyDZ")
       .then(
         (result) => {
           setSending("Message sent!");
@@ -127,20 +125,16 @@ const ContactForm = () => {
           id="teammbr"
           type="teammbr"
           name="teammbr"
-          placeholder="Select a person to contact"
+          // placeholder="Select a person to contact"
           value={formik.values.teammbr}
           onChange={formik.handleChange}
           className={style[fontColor]}
         >
-          <option disabled value="default">
+          <option default value="default">
             Select person to contact
           </option>
           {memberData.map((mbr) => (
-            <option
-              value={mbr.name}
-              onChange={formik.handleChange}
-              key={mbr.id}
-            >
+            <option value={mbr.name} key={mbr.id}>
               {mbr.name}
             </option>
           ))}
