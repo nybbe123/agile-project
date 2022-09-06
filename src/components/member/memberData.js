@@ -1,8 +1,8 @@
-import jonatan from "../../assets/jonatan.png";
-import millie from "../../assets/millie.png";
 import ella from "../../assets/ella.png";
 import erik from "../../assets/erik.png";
 import fia from "../../assets/fia.png";
+import jonatan from "../../assets/jonatan.png";
+import millie from "../../assets/millie.png";
 
 export const memberData = [
   {

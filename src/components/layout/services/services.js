@@ -5,11 +5,11 @@ import {
   faPaintBrush,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import serviceImage from "../../../assets/pexels-christina-morillo-1181263.jpg";
-import style from "./services.module.css";
-import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import serviceImage from "../../../assets/pexels-christina-morillo-1181263.jpg";
 import LinkContext from "../../../context/LinkContext";
+import style from "./services.module.css";
 
 const Services = () => {
   const linkCtx = useContext(LinkContext);

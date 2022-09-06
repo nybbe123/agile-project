@@ -1,12 +1,10 @@
-import style from "./Intro.module.css";
-import { Link as Scroll } from "react-scroll";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Link as Scroll } from "react-scroll";
+import style from "./Intro.module.css";
 
 const Intro = () => {
   return (
     <div id={style.root}>
-      {/* <img src={IntroBg} alt="background" className={style.background} /> */}
-
       <div className={style.introContainer}>
         <h1 className={style.introHeadingBold}>
           IN NEED OF A NEW{" "}

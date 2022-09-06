@@ -1,6 +1,6 @@
+import { GoogleMap, MarkerF, useLoadScript } from "@react-google-maps/api";
 import React, { useMemo } from "react";
 import style from "./CompanyMap.module.css";
-import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import mapStyle from "./mapsStyle.js";
 
 const CompanyMap = () => {
