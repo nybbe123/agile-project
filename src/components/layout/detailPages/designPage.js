@@ -6,7 +6,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import serviceImage from "../../../assets/pexels-christina-morillo-1181263.jpg";
-import style from "./frontEnd.module.css";
+import style from "./detailPages.module.css";
 
 const DesignPage = () => {
   return (
