@@ -7,7 +7,6 @@
   padding-bottom: 6rem;
   max-width: 2200px;
   color: #333333;
-  overflow-x: hidden;
 }
 
 .p {
@@ -47,7 +46,9 @@
 
 .memberInfo {
   display: flex;
+  max-width: 400px;
   width: 400px;
+  min-width: 300px;
 }
 
 .memberText {
@@ -106,12 +107,18 @@
 }
 
 @media (max-width: 600px) {
+  .container {
+    margin: auto;
+  }
   .memberTitleContainer {
     font-size: 20px;
     padding-bottom: 3rem;
   }
+  .memberInfo {
+    width: 85%;
+  }
   .memberText {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -123,10 +130,6 @@
 }
 
 @media (max-width: 400px) {
-  .container {
-    margin: auto;
-  }
-
   .memberPic {
     width: 140px;
   }

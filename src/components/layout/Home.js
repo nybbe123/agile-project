@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
 import LinkContext from "../../context/LinkContext";
-import ContactPage from "../layout/contact/contact-page/ContactPage";
-import MemberList from "../member/memberList";
+import Member from "../member/member";
 import CompanyMap from "./companyMap/CompanyMap";
+import Contact from "./contact/contact-page/Contact";
 import Intro from "./intro/Intro";
 import Services from "./services/services";
 
@@ -17,8 +17,8 @@ const Home = () => {
     <div>
       <Intro />
       <Services />
-      <ContactPage />
-      <MemberList />
+      <Contact />
+      <Member />
       <CompanyMap />
     </div>
   );
