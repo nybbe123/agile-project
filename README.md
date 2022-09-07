@@ -1,6 +1,6 @@
 # WEBLY
 
-[Link to Demo]](https://weblysson.netlify.app)
+[Link to Demo](https://weblysson.netlify.app)
 
 # Getting Started with Create React App
 
