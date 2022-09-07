@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import LinkContext from "../../context/LinkContext";
-import style from "../member/memberSection.module.css";
+import style from "../member/member.module.css";
 import { memberData } from "./memberData";
 
 function MemberCard() {

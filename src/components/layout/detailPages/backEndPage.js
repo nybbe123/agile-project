@@ -1,12 +1,12 @@
 import {
+  faCode,
   faDisplay,
   faLayerGroup,
-  faCode,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import serviceImage from "../../../assets/pexels-christina-morillo-1181263.jpg";
-import style from "./frontEnd.module.css";
 import { Link } from "react-router-dom";
+import serviceImage from "../../../assets/pexels-christina-morillo-1181263.jpg";
+import style from "./detailPages.module.css";
 
 const BackEndPage = () => {
   return (

@@ -104,23 +104,11 @@
   letter-spacing: 3px;
 }
 
-.firstTextAlign {
-  font-size: 16px;
-  width: 70%;
-  line-height: 150%;
-  font-family: "Roboto";
-  font-weight: lighter;
-}
-.secondTextAlign {
-  font-size: 16px;
-  width: 70%;
-  line-height: 150%;
-  font-family: "Roboto";
-  font-weight: lighter;
-}
+.firstTextAlign,
+.secondTextAlign,
 .thirdTextAlign {
   font-size: 16px;
-  width: 75%;
+  width: 70%;
   line-height: 150%;
   font-family: "Roboto";
   font-weight: lighter;
@@ -154,28 +142,17 @@
   display: flex;
   flex-direction: row;
 }
-.layersIcon {
-  color: #4a99e2;
-  font-size: 40px;
-  margin-right: 20px;
-}
 
-.tvIcon {
-  color: #4a99e2;
-  font-size: 40px;
-  margin-right: 20px;
-}
+.layersIcon,
+.tvIcon,
 .brushIcon {
   color: #4a99e2;
   font-size: 40px;
   margin-right: 20px;
 }
-.backEndAlign {
-  margin-top: 15px;
-}
-.frontAlign {
-  margin-top: 15px;
-}
+
+.backEndAlign,
+.frontAlign,
 .digitalAlign {
   margin-top: 15px;
 }
@@ -279,6 +256,11 @@
   }
   .box {
     display: none;
+  }
+  .layersIcon,
+  .tvIcon,
+  .brushIcon {
+    margin: auto;
   }
 }
 
