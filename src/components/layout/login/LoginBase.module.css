@@ -1,6 +1,7 @@
 .login-base {
   position: relative;
   height: 100vh;
+  min-height: 800px;
   display: flex;
 }
 
@@ -27,7 +28,7 @@
 
 .login-base-form {
   position: absolute;
-  top: 25%;
+  top: 120px;
   left: 50%;
   transform: translate(-50%);
   display: flex;

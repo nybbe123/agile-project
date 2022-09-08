@@ -1,6 +1,7 @@
 #root {
   display: flex;
   height: 100vh;
+  min-height: 750px;
   background-image: url("../../../assets/intro-bg.png");
   background-position: center;
   background-repeat: no-repeat;

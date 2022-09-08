@@ -64,14 +64,6 @@
 .loginOutBtn:hover {
   background: rgba(56, 57, 60, 0.4);
 }
-/* 
-.burgerMenu {
-  display: none;
-} */
-/* 
-.openedMenuClass {
-  display: none;
-} */
 
 .openMenuStyle {
   background-color: #333;
@@ -100,16 +92,6 @@
   letter-spacing: 2.5px;
 }
 
-/* .openMenuStyle ul li {
-  width: 18rem;
-  height: 3.3rem;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  padding-left: 2rem;
-  column-gap: 2rem;
-} */
-
 .scrollLink {
   width: 180px;
   height: 3.3rem;
@@ -121,14 +103,12 @@
   text-transform: uppercase;
 }
 
-/* .openMenuStyle ul li:hover, */
 .scrollLink:hover {
   cursor: pointer;
   background-color: #4a98e244;
   color: #54acff;
 }
 
-/* .openMenuStyle ul li:active, */
 .scrollLink:active {
   cursor: pointer;
   background-color: #4a98e23d;
