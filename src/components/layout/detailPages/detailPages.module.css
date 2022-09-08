@@ -10,7 +10,7 @@
   position: absolute;
   top: 280px;
   margin-left: 5rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .backgroundImg {
@@ -279,7 +279,7 @@
     display: none;
   }
   .h2 {
-    margin-top: 7rem;
+    margin-top: 3rem;
   }
   .h1 {
     font-size: 50px;
@@ -328,7 +328,62 @@
   }
 }
 
-@media only screen and (max-width: 485px) {
+/* @media (max-width: 507px) {
+  .h2Design {
+    margin-top: 4rem;
+  }
+  .h1 {
+    font-size: 30px;
+  }
+} */
+
+@media only screen and (max-width: 783px) {
+  .h1 {
+    font-size: 40px;
+  }
+
+  .h2 {
+    margin-top: 1.5rem;
+  }
+
+  .h2Design {
+    margin-top: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 645px) {
+  .h1 {
+    font-size: 35px;
+  }
+
+  .h2 {
+    margin-top: 1.3rem;
+    font-size: 25px;
+  }
+
+  .h2Design {
+    margin-top: 1.3rem;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .h1 {
+    font-size: 30px;
+  }
+
+  .h2 {
+    margin-top: 1.2rem;
+    font-size: 20px;
+  }
+
+  .h2Design {
+    margin-top: 1.2rem;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 507px) {
   .h1 {
     font-size: 30px;
   }
